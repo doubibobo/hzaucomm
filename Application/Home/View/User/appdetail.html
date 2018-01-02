@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/appdetail.css"/>
+ 
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/Public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/Public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+			<section>
+				<h3>个人中心</h3>
+				<ul class="ultop">
+					<li><a href="__APP__/Home/User/index">基本信息</a></li>
+					<li><a href="__APP__/Home/User/application">我的申请</a></li>
+					<li><a href="__APP__/Home/User/message">我的消息</a></li>
+					<li><a href="__APP__/Home/User/theme">我的关注</a></li>
+
+				</ul>
+			</section>
+			</div>
+			<div class="rightc">
+				<div id="topicCon">
+					<div class="mini_nav">
+						<span class="mini_title">详细信息</span>
+					</div>
+					<div class="showetail">
+					<div id="comment">
+					
+					<div class="sigleconmment">
+						<php>
+							$data['msdate'] = date("Y-m-d");
+							function findAll($type) {
+								switch($type) {
+									case 2: $after = "通过"; break;
+									case 0: $after = "待审"; break;
+									case 1: $after = "拒绝"; break;
+									default: $after = "待审";
+								}
+								return $after;
+							}
+
+							$data['asdate'] = date("Y-m-d");
+
+							function change($items) {
+								$items = preg_replace('/<([a-z]+?)\s+?.*?>/i','<$1>',$items);
+								$qian=array(" ","　","\t","\n","\r");
+								$hou=array("","","","","");
+								$items = str_replace($qian,$hou,$items);
+								return strip_tags($items);
+							}
+
+							$after1 = findAll($data['msdo']);
+							$after2 = findAll($data['ashaving']);
+							$data['msct'] = change($data['msct']);
+							$data['asct'] = change($data['asct']);
+						</php>
+						<div class="s_m_left">
+							<span class="commentor"><b>[<php>echo $after1;</php>]</b></span>
+							<div class="clr"></div>
+						</div>
+						<div class="s_m_right">
+							<p class="comment_con"><{$data['msct']}><{$data['asct']}></p>
+							<span class="comment_time"><{$data['msdate']}><{$data['asdate']}></span>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="clr"></div>
+				</div>	
+					</div>
+				</div>
+			</div>
+
+		</div>
+	
+	</div>
+	<div class="clr"></div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/Public/footer.html" />
+	</div>
+</body>
+</html>

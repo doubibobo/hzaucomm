@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=yes" />
+  <title>实验教学中心互动平台</title>
+  <link rel="shortcut icon" href="__ROOT__/logo.ico">
+  <link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+  <link rel="stylesheet" href="__PUBLIC__/face/css/document.css"/>
+  <link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.css"/>
+  <!-- <link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css"/> -->
+</head>
+<body>
+  <div id="Cheader">
+    <include file="./Application/Home/View/Index/public/header.html" />
+  </div>
+
+  <div id="Cnav">
+    <include file="./Application/Home/View/Index/public/nav.html" />
+  </div>
+
+  <div id="Cmain">
+    <div class="Ccontainer">
+      <div id="main_nav">
+        <section>
+          <h3>搜索</h3>
+          <ul class="ultop">
+            <li><a href="#">搜索结果</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="rightc_nhot">
+        <div class="mini_nav">
+          <span class="mini_title">搜索结果</span>
+        </div>
+       
+        <div class="float_lis">
+          <div class="list">
+            <ul>
+              <volist name="data" id="items">
+                <li ><a class="ex_item" href="__APP__/Home/"><div class="point"></div><{$items.rsname}><span><{$items.rsdate}></span></a></li>
+              </volist>
+            </ul>
+            <nav style="text-align:center;" >
+              <ul class="pagination">
+                <{$page}>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  </div>
+  <div id="Cfooter">
+    <include file="./Application/Home/View/Index/public/footer.html" />
+  </div>
+    <script src="__PUBLIC__/public/js/jquery-1.8.3.min.js" ></script>
+  <script type="text/javascript" src="__PUBLIC__/face/js/logre.js"></script>
+  
+</body>
+</html>

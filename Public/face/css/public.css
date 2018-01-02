@@ -1,0 +1,558 @@
+/*---------------------------------------------------------------------------------------------------*/
+*{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body,
+html{
+	font-family:"Times New Roman", Times, serif;
+	color:#333;
+	min-width:1200px;
+	height: 100%;
+	font-size:12px;
+}
+ul li{
+     list-style: none;
+}
+img{border: none;}
+a{outline:#FF00FF; text-decoration:none;}
+a:hover{cursor: pointer;}
+/*---------------------------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------class------------------------------------------------------*/
+.Ccontainer {
+	width:1050px;
+	margin: 0 auto;
+}
+.clr {
+	clear: both;
+	margin-top: 2px;
+}
+
+/*------------------------------------------end  class-----------------------------------------------*/
+
+
+/*----------------------------------------header-----------------------------------------------------*/
+#Cheader {
+	height: 118px;
+}
+#header_left {
+	width: 650px;
+	height: 86px;
+	padding: 14px;
+	float: left;
+	margin-top: 10px;
+	background: url(./logo.png) no-repeat;
+	background-size: 90% 87%;
+	background-position: center;
+}
+#header_left h2,
+#header_left h1 {
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	height: 35px;
+}
+#header_left a {
+	color: #000;
+}
+
+
+#header_right {
+	width: 250px;
+	padding-top: 30px;
+	float: right;
+}
+#header_right a {
+	padding-top: 8px;
+	color: green;
+}
+#header_right a:hover {
+	color: #21A900;
+}
+#login {
+	height: 20px;
+}
+#sitesearch input{
+	border:1.5px solid #3ebb2b;
+	font-size: 12px;
+	float: left;
+	height: 25px;
+}
+#sitesearch .search_input{
+	width: 190px;
+	position: relative;
+	text-indent: 5px;
+	padding: 3px 0;
+}
+#sitesearch .search_input:focus{
+	border:2px solid #3ebb2b;
+}
+#search{
+	width: 60px;
+	position: relative;
+	left: -5px;
+	background: #3ebb2b;
+	color: #FFF;
+}
+#search:hover{
+	cursor: pointer;
+	background: #21A900;
+}
+/*------------------------------------------end  header-----------------------------------------------------*/
+
+
+/*------------------------------------------------------nav--------------------------------------------------*/
+#Cnav {
+	background: green;
+	height: 48px;
+	border-radius: 3px;
+}
+#Cnav #nav_mul {
+	padding-left: 20px;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.nav_first {
+	width: 140px;
+	height: 48px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	line-height: 48px;
+/*	z-index: 999;*/
+}
+#nav_course,#nav_source,#nav_main,#nav_comp{
+	display: block;
+	height: 48px;
+	width: 140px;
+	color: #eee;
+	font-size: 14px;
+	font-weight: 800;
+	transition: all 250ms;
+}
+#nav_course:hover,#nav_source:hover,
+#nav_main:hover,#nav_comp:hover {
+	background: #fff;
+	color: green;
+	border-top:  2px solid green;
+	border-left: 2px solid green;
+	border-right: 2px solid green;
+}
+
+#nav_hidden1,#nav_hidden2,#nav_hidden3 {
+	background: rgb(255,255,255);
+	color: rgb(29,142,29);
+	border-left: 2px solid green;
+	border-right: 2px solid green;
+	width: 140px;
+	font-size: 14px;
+	position: absolute;
+	height: 0;
+	overflow: hidden;
+	transition: height 500ms;	z-index: 9999;
+}
+.nav_first:hover #nav_hidden1
+ {
+	/*display: block;*/
+	height: 250px;
+	border-bottom:  2px solid green;
+}
+.nav_first:hover #nav_hidden2 {
+	height: 200px;
+	border-bottom:  2px solid green;
+}
+.nav_first:hover #nav_hidden3 {
+	height: 150px;
+	border-bottom:  2px solid green;
+}
+#nav_hidden1 ul li a,
+#nav_hidden2 ul li a,
+#nav_hidden3 ul li a{
+	display: block;
+	height: 50px;
+	/*width: 117px;*/
+	color: green;
+	font-size: 14px;
+	font-weight: 800;
+	transition: all 0.5s;
+	z-index: 2;
+}
+#nav_hidden1 ul li a:hover,
+#nav_hidden2 ul li a:hover,
+#nav_hidden3 ul li a:hover {
+	background: green;
+	color: #fff;
+	font-size: 15px;
+}
+
+/*---------------------------------------------end  nav------------------------------------------------------*/
+
+
+/*-----------------------------------------------footer------------------------------------------------------*/
+#con {
+	width: 100%;
+	background: #333;
+}
+#Cfooter{
+	background: #303030;
+	color: #acacac;
+	font-size: 13px;
+	line-height: 1.6em;
+	padding: 35px 0 40px 0;
+	height: 207px;
+}
+#Cfooter a{
+	color: #979797;
+}
+#Cfooter a:hover{
+	color: #FFF;
+}
+#Cfooter h2{
+	font-size: 16px;
+	margin: 0 0 15px;
+	color: #fff;
+}
+.footbox{
+	float: left;
+	padding-right: 163px;
+	margin-right: 140px;
+}
+.footbox address{
+	color: #979797;
+	font-style: normal;
+}
+.foot-bottom,
+.foot-bottom p{
+	width: 100%;
+}
+.foot-bottom{
+	float: left;
+	margin: 25px 0 0 0;
+	padding:0 0 5px 0;
+	font-size: 12px;
+}
+.foot-bottom span{
+	margin-right: 170px;
+}
+/*-------------------------------------------end  footer-----------------------------------------------------*/
+
+/*---------------------rightc------------------*/
+.rightc {
+	margin: 25px 0px 0px 10px;
+	padding-right: 15px;
+	width: 60%;
+	float: left;
+}
+.rightc_nhot {
+	margin: 25px 0px 0px 10px;
+	padding-right: 15px;
+	width: 73%;
+	float: left;
+}
+				/*---------mini _nav-------*/
+				.mini_nav {
+					width: 100%;
+					border-bottom: 1px solid rgb(0,128,0);
+				}
+				.mini_title {
+					display: inline-block;
+					margin-top: 5px;
+					margin-left: 20px;
+					font-size: 20px;
+					height: 50px;
+					padding: 20px;
+					color: rgb(15,148,26);
+					font-size: 20px;
+				}
+/* ----------------------------------------------左导航-------------------------------------*/
+#main_nav{
+	margin: 25px 0 30px 0;
+	width: 230px;
+	height: 100%;
+	background:#fff linear-gradient(to bottom, #006A00, #adda4d) repeat scroll 0 0;
+	border-radius:0 5px 0 0;
+	float: left;
+}
+#main_nav section{
+	width: 218px;
+	float: right;
+}
+#main_nav h3{
+	color: #FFF;
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 68px;
+	padding: 0 0 0 25px;
+	text-shadow:0 1px 4px rgba(0, 0, 0, 0.5);
+}
+#main_nav ul{
+	background: #FFF;
+	border-top: 1px solid #ddd;
+	padding: 20px 0 0 0;
+	height: 285px;	
+}
+#main_nav ul li{border-top: 1px solid #ddd;}
+#main_nav li a{
+	text-indent: 30px;
+	display: inline-block;
+	width: 100%;
+	font-size: 16px;
+	height: 45px;
+	font-family: Arial;
+	line-height: 45px;
+	color: #003e3e;
+	position: relative;
+	left: -3px;
+}
+#main_nav li a:hover,
+#main_nav li a:active{
+	color:green;
+	border-left: 3px solid orange;
+	background: #fffafa;
+	text-indent: 50px;
+	transition-property:text-indent;
+	transition-duration:0.8s;
+}
+/*----------------------------------------hottpc-------------------------------------------------*/
+.hottpc {
+	float: right;
+/*	position: relative;
+	left: 30px;
+	top: 160px;*/
+	background: #fff;
+	/*margin-left: 20px;	*/
+	padding-top: 20px;
+	margin-top: 25px;
+	font-size: 13px;
+}
+#h_t_ti {
+	height: 33px;
+	line-height: 34px;
+	font-size: 14px;
+	font-weight: 700;
+	padding-left: 4px;
+	margin-bottom: 10px;
+	
+}
+.h_t_con_ex {
+	height: 25px;
+	line-height: 15px;
+}
+.h_t_con_ex_num_c {
+	background: #ff7f42 none repeat scroll 0 0;
+	color: #fff;
+}
+.h_t_con_ex_num_c, .h_t_con_ex_num{
+	padding: 1px 4px;
+	margin-right: 7px;
+	margin-left: 3px;
+	display: block;
+	float: left;
+}
+.h_t_con_ex_tit {
+	display: block;
+	float: left;
+	width:100px;
+	height: 20px;
+	color:#666;
+	margin-right: 8px;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.h_t_con_ex_tit:hover {
+	text-decoration: underline;
+}
+.h_t_con_ex_heat {
+	text-align: center;
+	float: right;
+}
+
+/*------------------------------------end hottpc-------------------------------------------------*/
+
+/*-----------------------------------search form------*/
+.searchform {
+	width: 550px;
+	padding: 5px;
+}
+.searchform .con_input {
+	color: rgb(0,0,0,0.8);
+	margin: 0 0 10px 30px;
+	font-size: 13px;
+
+}
+
+.searchform .con_input .input {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 200px;
+	border: 1.5px solid #3ebb2b;
+	border-radius: 4px;
+	margin-top: 10px;	
+}
+
+.searchform .con_input .input:hover,
+.searchform .con_input .input:focus {
+	border: 2px solid #3ebb2b;	
+}
+
+.searchform .con_input option:hover {
+	background: rgb(182,182,171);
+}
+
+.searchform .con_input #Ssubmit {
+	display: block;
+	float: left;
+	color: #FFFFFF;
+	height: 35px;
+	width: 80px;
+	margin: 10px 0 0 14px;
+	background: #3ebb2b;
+	border: 1.5px solid #3ebb2b;
+	border-radius: 3px;
+}
+/* ----------------------------------------------Login、register-------------------------------------*/
+/****************Public****************/
+.mask{
+	border:none;
+	width:100%;
+	height:100%;
+	background:#333;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	z-index:999999;
+	position:fixed;
+	top:0;
+	left:0;
+	display:none;
+}
+#LoginBox,
+#RegisterBox{
+	position:absolute;
+	top:18%;
+	left: 40%;
+	z-index: 1000000;
+	border: 1px solid #a0b1c4;
+	background: #fff;
+	border-radius: 7px;
+	display: none;
+}
+.logreg_title{
+	background: #eff4fa;
+	height: 50px;
+	line-height:50px;
+	border: 1px solid #dbe2ea;
+	font-size: 19px;
+	color: #666;
+	padding: 0 20px; 
+	font-weight: 700;
+	border-radius: 7px 7px 0 0; 
+}
+.logreg_title a{
+	float: right;
+	color: #999;
+	font-size: 30px;
+	font-family: arial;
+	font-weight: 700;
+}
+.logreg_title a:hover,
+.logreg_title a:active{
+	color: #000;
+}
+.suggest{
+	color: red;
+	font-size: 12px;
+	font-weight: lighter;
+	height: 15px;
+	line-height: 15px;
+	margin:10px 0 9px 0;
+	padding: 0 0 0 40px;
+}
+.row,
+.regrow{
+	height: 42px;
+	line-height: 42px;
+}
+.row{margin:0px 0 18px 30px;}
+#LoginBox input[type="text"],
+#LoginBox input[type="password"],
+#RegisterBox input[type="text"],
+#RegisterBox input[type="password"]{
+	display: inline-block;
+	border: 1px solid #dbe2ea;
+	border-radius: 5px;
+	padding: 2px 5px 2px 15px;
+	width: 285px;
+	margin: 0 auto;
+	height: 100%;
+}
+#LoginBox input:focus,
+#RegisterBox input:focus{
+	border: 1px solid #a0b1c4;
+}
+.okbtn{
+	display: inline-block;
+	background: #6aa2e0;
+	border-radius: 5px;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	width: 285px;
+	text-align: center;
+}
+
+/****************Login****************/
+#LoginBox{
+	width: 355px;
+	height: 345px;
+}
+#LoginBox input[type="checkbox"]{
+	position: relative;
+	top: 2px;
+	margin: 0 3px 0 6px;
+}
+.warning{
+	color: red;
+	font-weight: 700;
+	font-size: 18px;
+	margin: 0 15px 0 0px;
+	float: right;
+	display: none;
+}
+.reg_link{
+	color: #225592;
+}
+.reg_link:hover{
+	text-decoration: underline;
+}
+
+/****************Register****************/
+#RegisterBox{
+	width: 355px;
+	height: 415px;
+}
+#RegisterBox #regcode{
+	width: 135px;
+	position: relative;
+	top: 0;
+}
+.regrow{
+	margin:29px 0 18px 30px;
+}
+#regcode{
+	display: inline-block;
+	float: left;
+	margin: 0 0 0 10px;
+	border: 1px solid red;
+	height: 40px;
+}

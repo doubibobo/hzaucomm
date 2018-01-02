@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/showitem.css"/>
+
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+				<section>
+					<h3>学科交流</h3>
+					<ul class="ultop">
+						<li><a href="__APP__/Home/course/course">实践实习类</a></li>
+						<li><a href="__APP__/Home/course/course1">专业基础类</a></li>
+						<li><a href="__APP__/Home/course/course2">作物生产类</a></li>
+						<li><a href="__APP__/Home/course/course3">植物保护类</a></li>
+						<li><a href="__APP__/Home/course/course4">创新实验课程</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="rightc">
+				<div id="theme">
+					<span class="theme_contant">主题:<{$data.msname}></span>
+					<sapn class="theme_des">简述：<{$data.msct}></sapn>
+					<div class="clr"></div>
+					<span class="theme_publisher">来自<{$data.theOwner.stuser}></span>
+					<div class="clr"></div>
+				</div>
+				<div id="comment">
+					<div class="total">
+						<{$data.mshaving}>个评论
+						<div class="addcomment"><button class="addbutton">评论</button></div>
+					</div>
+					<volist name="theAns" id="signalcomment">
+						<php>
+							if ($signalcomment['ashaving'] == 1) {
+						</php>
+								<div class="sigleconmment">
+							<div class="s_m_left">
+								<span class="commentor"><{$signalcomment.theOwner.stuser}></span>
+								<div class="clr"></div>
+								<picture class="replay">回复</picture>
+								<a class="praise" href=""><picture></picture>赞</a>
+							</div>
+							<div class="s_m_right">
+								<php>
+									$signalcomment['asct'] = preg_replace('/<([a-z]+?)\s+?.*?>/i','<$1>',$signalcomment['asct']);
+									$qian=array(" ","　","\t","\n","\r");
+									$hou=array("","","","","");
+									$signalcomment['asct'] = str_replace($qian,$hou,$signalcomment['asct']);
+									$signalcomment['asct'] = strip_tags($signalcomment['asct']);
+								</php>
+								<p class="comment_con"><{$signalcomment.asct}></p>
+								<input type="text" name="asid" value="<{$signalcomment.id}>" hidden>
+								<!--<span class="comment_to">回复给：<{$signalcomment}></span>-->
+								<span class="comment_time"><{$signalcomment.asdate}></span>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<php>
+							}
+						</php>
+					</volist>
+					<div class="clr"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="Chidden">
+		<div class="re_frame">
+			<form id="reply_h" method="post" action="__URL__/addcomment">
+				<div class="con_input">
+				<!-- <input type="text" name="<{$ansid}>"> -->
+					
+				<!-- 这里需要js获取相应项目的值 -->
+				<textarea id="textarea" class='input' type="text" name="title" placeholder="回复给：XXXXXX"></textarea> 
+				</div>
+				<div class="clr"></div>
+				<div class="con_input"><input id='submit' type="submit" value="回复"></div>
+				<div class="clr"></div>
+			</form>
+			<form id="add_comment" method="post" action="__URL__/addAns">
+				<div class="con_input">
+					<input name="msid" value="<{$data.id}>" hidden>
+					<textarea  class='input' type="text" name="asct" placeholder="添加评论"></textarea>
+				</div>
+				<div class="clr"></div>
+				<div class="con_input"><input id='addsubmit' type="submit" value="回复"></div>
+				<div class="clr"></div>
+			</form>
+		</div>
+	</div>
+	<div class="clr"></div>
+	</div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/public/footer.html" />
+	</div>
+		<script type="text/javascript" src="__PUBLIC__/face/js/showitem.js"></script>
+		<script type="text/javascript">
+			document.getElementById("submit").onclick = function(){
+				Form.style.display = "none";
+				document.getElementById('Cheader').style.filter = ' ';
+				document.getElementById('Cnav').style.filter    = 'blur(0px) ';
+				document.getElementById('Cmain').style.filter   = 'blur(0px) ';
+				document.getElementById('Cfooter').style.filter = 'blur(0px) ';
+			// $.ajax({  
+   //              type: "POST",  
+   //              url:"__APP__/Home/.......",  
+   //              data:{'username':$("#username").val(),
+   //              	  'password':$("#password").val()},// 序列化表单值  
+   //              async: true,  
+   //              error: function(request) {  
+   //                  alert(request.readyState + ' ' +request.status );  
+   //              },  
+   //              success: function(data) {  
+			// 		if(data['flag'] == 1){
+			// 			window.location.href="__APP__/Home/Index/index";
+			// 		}else {
+   //                  	alert(data['message']);
+			// 		}
+			// 	}  
+   //          }); 
+		}
+		</script>
+    <script src="__PUBLIC__/public/js/jquery-1.8.3.min.js" ></script>
+		
+	<script type="text/javascript" src="__PUBLIC__/face/js/logre.js"></script>
+
+</body>
+</html>

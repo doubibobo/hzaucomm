@@ -1,0 +1,26 @@
+<div class="Ccontainer">
+  <div id="header_left">
+    
+  </div>
+  <div id="header_right">
+      <div id="login">
+          <eq name="Think.session.username" value="">
+            <p><a href="#" class="logBut">学生登录</a> | <a href="#" class="logBut">教师登录</a> | <a href="#" class="reg_link">注册</a></p><br/>
+            <!-- 判断登陆后        显示下面这行代码 -->
+          <else/>
+            <p><a href="#">访问旧版</a> | <{$Think.session.username}>你好！ | <a href="__APP__/Home/User/index">个人中心</a> | <a href="__APP__/Home/User/loginout">退出</a></p><br/>
+          </eq>
+      </div>
+      <form action="__APP__/Home/index/glo_search" method="post" id="sitesearch">
+        <input type="text" value="" placeholder="全文搜索" class="search_input"  />
+         <!-- <input type="text" value="" class="search_input" onfocus="this.value=(this.value=='全文搜索&hellip;')? '' : this.value ;" /> -->
+        <input type="submit" id="search" value="搜索" alt="搜索" />
+      </form>
+  </div>
+</div>
+
+<!--***************登陆框***************-->
+<include file="./Application/Home/View/index/Public/login.html" />
+
+<!--***************注册框***************-->
+<include file="./Application/Home/View/index/Public/register.html" />

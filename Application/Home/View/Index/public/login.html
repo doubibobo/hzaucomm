@@ -1,0 +1,44 @@
+<div id="LoginBox">
+    <div class="logreg_title">
+        登陆<a href="javascript:void(0)" title="关闭窗口" class="close_btn" >×</a>
+    </div>
+    <form action="<?php echo U('User/login') ?>" method="post" name="myForm">
+        <p class="suggest"></p>
+        <div class="row">    
+            <input type="text" placeholder="用户名" id="logName" name="username"/>
+            <a href="javascript:void(0)" title="提示" class="warning" id="warn">*</a>
+        </div>
+        <div class="row">     
+            <input type="password" placeholder="密码" id="logPwd" name="password"/>
+            <a href="javascript:void(0)" title="提示" class="warning" id="warn2">*</a>
+        </div>
+        <div class="row">
+            <input type="checkbox"  name="remember"/>
+            下次自动登录
+             &nbsp&nbsp|&nbsp&nbsp
+            <a class="reg_link" href="#">注册</a>
+        </div>
+        <div class="row">
+           <!--<a href="javascript:login()" class="okbtn">登陆</a>-->
+            <input type="submit" class="okbtn" value="登陆">
+        </div>
+    </form>    
+</div>
+
+<script>
+// $(function(){
+//      //登录AJAX提示判断
+//     $.post('', {
+//         username:$("#logName").val(),
+//         password:$("#logPwd").val(),
+//     },function(text){
+//         if(text=="pass"){
+//             // alert('pass')
+//             window.location.href="__APP__/Home/Index/index";
+//         }else{
+//             $("#suggest").html(text);
+//         }
+//     });
+// })
+</script>
+

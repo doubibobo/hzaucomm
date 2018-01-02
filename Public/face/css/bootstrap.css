@@ -1,0 +1,12 @@
+.container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+ 
+}
+.container {
+   margin-top: 5px;
+  width: 550px;
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}

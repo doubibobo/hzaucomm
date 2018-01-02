@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/appdetail.css"/>
+ 
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/Public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/Public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+			<section>
+				<h3>个人中心</h3>
+				<ul class="ultop">
+					<li><a href="__APP__/Home/User/index">基本信息</a></li>
+					<li><a href="__APP__/Home/User/application">我的申请</a></li>
+					<li><a href="__APP__/Home/User/message">我的消息</a></li>
+					<li><a href="__APP__/Home/User/theme">我的关注</a></li>
+
+				</ul>
+			</section>
+			</div>
+			<!--<div class="rightc">-->
+				<!--<div id="topicCon">-->
+					<!--<div class="mini_nav">-->
+						<!--<span class="mini_title">关注主题</span>-->
+					<!--</div>-->
+					<!---->
+				<!--</div>-->
+			<!--</div>-->
+			<div class="rightc">
+				<div id="topicCon">
+					<div class="mini_nav">
+						<span class="mini_title">课程</span>
+					</div>
+					<div>
+						<volist name="checkedMs" id="items">
+							<div class="topic">
+								<div class="substance">
+									<div class="substance_top">
+										<div class="s_t_title"><a href="__APP__/Home/course/showitem/id/<{$items.id}>">讨论交流主题 <{$items.msname}></a></div>
+										<div class="author">
+											<span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/person.png" alt="" class="icon_a" title="主题作者" ) no-repeat;"><{$items.msowner}></span>
+											<span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/time.png" alt="" class="icon_a" title="发布时间" ) no-repeat;"><{$items.msdate}></span>
+											<span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/comment.png" alt="" class="icon_a" title="评论量" ) no-repeat;"><{$items.mshaving}></span>
+											<span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/prise.png" alt="" class="icon_a" title="评论量" ) no-repeat;"><{$items.mslike}></span>
+										</div>
+									</div>
+									<div class="clr"></div>
+									<div class="substance_down">
+										<php>
+											$items['msct'] = preg_replace('/<([a-z]+?)\s+?.*?>/i','<$1>',$items['msct']);
+											$qian=array(" ","　","\t","\n","\r");
+											$hou=array("","","","","");
+											$items['msct'] = str_replace($qian,$hou,$items['msct']);
+											$items['msct'] = strip_tags($items['msct']);
+										</php>
+										<div class="s_d_reply"><{$items.msct}></div>
+										<div class="replyer">
+											<span class="s_d_l"><img src="__PUBLIC__/face/images/icon/person.png" alt="" class="icon_r" title="最新回复人" ) no-repeat;">朱传波</span>
+											<span class="s_d_l"><img src="__PUBLIC__/face/images/icon/time.png" alt="" class="icon_r" title="回复时间" ) no-repeat;">17：01</span>
+										</div><div class="clr"></div>
+									</div>
+								</div>
+							</div>
+						</volist>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<div class="clr"></div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/Public/footer.html" />
+	</div>
+</body>
+</html>

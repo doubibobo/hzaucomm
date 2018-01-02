@@ -1,0 +1,75 @@
+.minihead {
+	height: 35px;
+	width: 97%;
+	margin-top: 8px;
+}
+.m_h_title {
+	line-height: 33px;
+	display:block;
+	float: left;
+	color: rgba(0,128,0,1);
+	margin-left: 6px;
+}
+.themeapp {
+	padding: 0 20px;
+	width: 100%;
+}
+.sourceapp {
+	padding: 0 20px;
+	width: 100%;
+}
+.list {
+	width: 100%;
+	padding: 0 15px 3px 15px;
+	min-height: 180px;
+	font-size: 15px;
+	line-height: 25px;
+	font-family: sans-serif;
+	padding: 10px 30px;
+}
+.list .ex_item {
+	border-bottom: 1px dashed #eaeaea;
+    color: #65666d;
+    display: block;
+    font-size: 15px;
+    height: 33px;
+    line-height: 38px;
+    margin: 0px auto 5px;
+    text-decoration: none;
+    text-indent: 15px;
+    transition: all 350ms;
+}
+.list .ex_item .point {
+	height: 5px;
+	width: 5px;
+	background: #b8b8b8;
+	border-radius: 50%;
+	position: relative;
+	top: 10px;
+	left: 10px;
+	margin-left: 6px;
+	margin-right: 8px;
+	margin-top: 6px;
+	float: left;
+	transition: left 350ms;
+}
+.list .ex_item p {
+	display: inline-block;
+	width: 330px;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;	
+}
+.list .ex_item span {
+	display: inline-block;
+	float: right;
+	margin-right: 15px;
+}
+.list .ex_item:hover {
+	color: rgb(33,169,0);
+	text-indent: 0px;
+}
+.list .ex_item:hover .point {
+	background: rgb(33,169,0);
+	left: 0;
+}

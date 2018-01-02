@@ -1,0 +1,26 @@
+<div id="RegisterBox">
+    <div class="logreg_title">
+         注册<a href="javascript:void(0)" title="关闭窗口" class="close_btn" >×</a>
+    </div>
+    <form action="<?php echo U('User/register') ?>" method="post" name="myForm">
+        <p class="suggest"></p>
+        <div class="row">    
+            <input type="text" placeholder="用户名" id="logName" name="username"/>
+        </div>
+        <div class="row">     
+            <input type="password" placeholder="密码" id="logPwd" name="password"/>
+        </div>
+        <div class="row">
+             <input type="password" placeholder="确认密码" id="Repwd" name="repassword"/>
+        </div>
+        <div class="row">
+            <input type="text" id="regcode" placeholder="验证码" name='code' />
+            <img src="__APP__/Home/Header/verifyImg" alt="Code" id="regcode" onclick="this.src=this.src+'?'+Math.random()">
+        </div>
+        <div class="regrow">
+           <!--<a href="javascript:login()" class="okbtn">注册</a>-->
+            <input type="submit" class="okbtn" value="注册">
+           <!--<input> class="okbtn">注册</a>-->
+        </div>
+    </form>    
+</div>

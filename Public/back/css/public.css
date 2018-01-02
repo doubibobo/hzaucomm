@@ -1,0 +1,40 @@
+
+/************************************（图片轮播）添加文章标题内容 style************************************/
+.gallery_title{	
+	height: 25px;
+	padding: 0 10px;	
+}
+.gallery_title,
+.gallery_textarea{
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	margin: 0 0 10px 0;
+	width: 100%;
+}
+.gallery_add{
+	color: #fff;
+	background: #26b99a;
+	position: absolute;
+	right: 30px;
+	bottom:7px;
+	width: 65px;
+	border-radius: 30px;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #169f85;
+	font-weight: 400;
+	font-size: 14px;
+}
+.gallery_add:hover{
+	cursor: pointer;
+	background: #d9534f;
+	border: 1px solid #d43f3a;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+

@@ -1,0 +1,48 @@
+.picturecon {
+	width: 100%;
+	padding: 1%;
+	padding-left: 25px;	
+	min-height: 300px;
+}
+.ex_pic {
+	width: 30%;
+	height: 140px;
+	min-width: 160px;
+	margin-right: 3%;
+	overflow: hidden;
+	cursor: pointer;
+	float: left;
+	margin-bottom: 20px
+
+}
+.ex_pic .picture {
+	width: 100%;
+	height: 100%;
+	transition: all 750ms ease-out;
+}
+.ex_pic .cont {
+	display: block;
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	position: relative;
+	transition: top 750ms ease-out;
+	background:  rgba(0, 0, 0, 0.2);
+	color: #fff;
+
+}
+.ex_pic .descri {
+	display: inline-block;
+	margin-top: 9px;
+	font-size: 16px;
+	height: 20px;
+	line-height: 20px;
+}
+.ex_pic:hover .picture {
+	transform:scale(1.1,1.1);
+
+}
+.ex_pic:hover .cont {
+	top:-45px;
+	transition: all 750ms ease-out;
+}

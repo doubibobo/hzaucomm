@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/themeluanch.css"/>
+
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+				<section>
+					<h3>主题交流</h3>
+					<ul class="ultop">
+						<li><a href="__APP__/Home/comp/comp">最近主题</a></li>
+						<li><a href="__APP__/Home/comp/comp">热门主题</a></li>
+
+					</ul>
+				</section>
+			</div>
+			<div class="rightc">
+				<div id="topicCon">
+					<div class="mini_nav">
+						<span class="mini_title">主题发布</span>
+					</div>
+					<div class="luanch">
+						<div class="form">
+							<!-- <div class="con_input"><sapn class="hint">类别：</sapn>
+							<select style="height: 35px;width: 120px;margin-top: 8px;">
+								<option value="">实践实习类</option>
+								<option value="">专业基础类</option>
+								<option value="">作物生产类</option>
+								<option value="">植物保护类</option>
+								<option value="">创新实验课程</option>	
+							</select></div><div class="clr"></div> -->
+							<div class="con_input"><sapn class="hint">标题：</sapn><input class='input' type="text" name="descripe"></div><div class="clr"></div>
+							
+							<div class="con_input"><sapn class="hint">简述：</sapn> </div>
+							<div class="con_input">
+							<div class="clr"></div>
+							<div class="textinput">
+								<div id="editor">
+								</div>
+							</div><div class="clr"></div>
+							</div><div class="clr"></div>
+							<div class="con_input"><input id='submit' type="submit" value="提交"></div>
+						</div>
+					</div>
+				</div>	
+			</div>		
+
+		</div>
+			
+	</div>
+	<div class="clr"></div>
+	</div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/public/footer.html" />
+	</div>
+    <script type="text/javascript" src="__PUBLIC__/Js/wangEditor.min.js"></script>
+    <script type="text/javascript">
+        var E = window.wangEditor;
+        var editor = new E( document.getElementById('editor') );
+        editor.create();
+    </script>
+    <script src="__PUBLIC__/public/js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__/face/js/logre.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>华中农业大学实验教学中心互动平台</title>
+
+  	<link rel="shortcut icon" href="__ROOT__/back.ico" type="image/x-icon" />
+	  <!-- Bootstrap -->
+    <link href="__PUBLIC__/back/include/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 图标引入 -->
+    <link href="__PUBLIC__/back/include/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="__PUBLIC__/back/include/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="__PUBLIC__/back/css/custom.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/back/css/public.css" rel="stylesheet" >
+</head>
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <!--************************************************* 左导航 *************************************************-->
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            
+        <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_header.html" />
+              <br />
+
+              <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_middle.html" />
+
+              <!--  左导航底部 -->
+             <include file="./Application/Admin/View/Public/nav_footer.html" />
+
+          </div>
+        </div>
+
+        <!--************************************************* 顶导航 *************************************************-->
+        <include file="./Application/Admin/View/Public/top_nav.html" />
+      
+
+        <!--************************************************* 右内容 *************************************************-->
+		<div class="right_col" role="main">
+          <div class="col-md-10 col-sm-12 col-xs-12">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>评论 <small>Comment</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li class="panel_toolbox_li"><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                  <li class="panel_toolbox_li"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <table id="datatable" class="table table-striped table-bordered">
+                  <thead>
+                  <tr>
+                    <th>标题</th>
+                    <th style="width:15%;">日期</th>
+                    <th style="width:20%;">操作</th>
+                  </tr>
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+                      <td><a href="__URL__/commentshow">r_name</a></td>
+                      <td>r_time</td>
+                      <td>
+                        <a href="__URL__/" >Delete <i class="fa fa-close"></i></a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="__URL__/commentshow">r_name</a></td>
+                      <td>$vo.r_time</td>
+                      <td>
+                        <a href="__URL__/" >Delete <i class="fa fa-close"></i></a>
+                      </td>
+                    </tr>
+
+                  <!-- <volist name="data" id="vo" key="k">
+                    <PHP>
+                      if($k % 2 == 0) {
+                    </PHP>
+                    <tr>
+                      <td><a href="__URL__/fictitious_show1_update/id/<{$vo.id}>/by/1"><{$vo.r_name}></a></td>
+                      <td><{$vo.r_time}></td>
+                      <td>
+                        <a href="__URL__/fictitious_show1_update/id/<{$vo.id}>/by/1" >Edit <i class="fa fa-pencil"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="__URL__/creation_show1_delete/id/<{$vo.id}>/ta/1" >Delete <i class="fa fa-close"></i></a>
+                      </td>
+                    </tr>
+                    <PHP>
+                      } else {
+                    </PHP>
+                    <tr>
+                      <td><a href="__URL__/fictitious_show1_update/id/<{$vo.id}>/by/1"><{$vo.r_name}></a></td>
+                      <td><{$vo.r_time}></td>
+                      <td>
+                        <a href="__URL__/fictitious_show1_update/id/<{$vo.id}>/by/1" >Edit <i class="fa fa-pencil"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;<a href="__URL__/creation_show1_delete/id/<{$vo.id}>/ta/1" >Delete <i class="fa fa-close"></i></a>
+                      </td>
+                    </tr>
+                    <PHP>
+                      }
+                    </PHP>
+                  </volist> -->
+                  </tbody>
+                </table>
+                <br><br>
+                <div  data-toggle="modal" data-target="#myModal" class="gallery_add">添加</div>
+              </div>
+            </div>
+          </div>
+    </div> 		
+
+ 
+
+        <!--************************************************* 底部版权 *************************************************-->
+        <include file="./Application/Admin/View/Public/footer.html" />
+
+      </div>
+    </div>
+
+    <!--************************************************* publc JS *************************************************-->
+    <include file="./Application/Admin/View/Public/public_js.html" />
+    <!-- <script src="__PUBLIC__/back/include/datatables.net/js/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="__PUBLIC__/back/include/datatables.net-bs/js/dataTables.bootstrap.min.js"></script> -->
+  </body>
+</html>

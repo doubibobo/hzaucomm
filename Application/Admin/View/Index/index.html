@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>华中农业大学实验教学中心互动平台</title>
+
+  	<link rel="shortcut icon" href="__ROOT__/back.ico" type="image/x-icon" />
+	  <!-- Bootstrap -->
+    <link href="__PUBLIC__/back/include/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 图标引入 -->
+    <link href="__PUBLIC__/back/include/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="__PUBLIC__/back/include/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="__PUBLIC__/back/css/custom.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/back/css/public.css" rel="stylesheet" >
+</head>
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <!--************************************************* 左导航 *************************************************-->
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            
+        <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_header.html" />
+              <br />
+
+              <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_middle.html" />
+
+              <!--  左导航底部 -->
+             <include file="./Application/Admin/View/Public/nav_footer.html" />
+
+          </div>
+        </div>
+
+        <!--************************************************* 顶导航 *************************************************-->
+        <include file="./Application/Admin/View/Public/top_nav.html" />
+      
+
+        <!--************************************************* 右内容 *************************************************-->
+		<div class="right_col" role="main">
+            <div class="col-md-12 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>图片轮播 <small>Picture Gallery</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li class="panel_toolbox_li">
+                          <a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                      <li class="panel_toolbox_li"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div class="row">
+                        <volist name="allImagics" id="vo">
+                            <div class="col-md-55">
+                                <div class="thumbnail">
+                                    <div class="image view view-first">
+                                        <img style="width: 100%; display: block;" src="__ROOT__/Uploads/<{$vo.imgadd}>" alt="image" />
+                                        <div class="mask">
+                                            <script>
+                                                function subgo() {
+
+                                                }
+                                            </script>
+                                            <p><{$vo.imgname}></p>
+                                            <div class="tools tools-bottom">
+                                                <!--<a href="javascript:void(0)" onclick="subgo()"><i class="fa fa-pencil"></i></a>-->
+                    <!--                             <a href="#" data-toggle="modal" data-target="#myModal<{$key}>"><i class="fa fa-pencil"></i></a> -->
+                                                <a href="__URL__/imgDelete/id/<{$vo.id}>/ty/<{$vo.type}>"><i class="fa fa-times"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <p><{$vo.imgintro}></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </volist>
+                        <div style="width:100%;float:left;">
+                            <p style="color: red;">最多添加五项！！</p>
+                            <div data-toggle="modal" data-target="#myModal5" class="gallery_add">添加</div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-12 col-xs-12">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>热门主题 <small>Hot Topic</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li class="panel_toolbox_li"><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                  <li class="panel_toolbox_li"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+                <div class="x_content">
+                    <table id="datatable" class="table table-striped table-bordered">
+                        <thead>
+                        <tr>
+                            <th>标题</th>
+                            <th style="width: 15%;">日期</th>
+                            <th style="width: 7%">发布人</th>
+                            <th style="width: 7%">获赞数</th>
+                            <th style="width: 7%">回答数</th>
+                            <th style="width: 8%;">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="hotThemes" id="vo">
+                            <tr>
+                                <td><a href="__URL__/themeshow/id/<{$vo.id}>"><{$vo.msname}></a></td>
+                                <td><{$vo.msdate}></td>
+                                <td><{$vo.msowner}></td>
+                                <td><{$vo.mslike}></td>
+                                <td><{$vo.mshaving}></td>
+                                <td>
+                                    <a href="__URL__/deleteMs/id/<{$vo.id}>" >Delete <i class="fa fa-close"></i></a>
+                                </td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                    <br><br>
+                    <!--<div  data-toggle="modal" data-target="#myModal" class="gallery_add">添加</div>-->
+                </div>
+            </div>
+          </div>
+            <div class="col-md-10 col-sm-12 col-xs-12">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>最新交流 <small>Latest Topic</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li class="panel_toolbox_li"><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                  <li class="panel_toolbox_li"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                  <table id="datatable" class="table table-striped table-bordered">
+                      <thead>
+                      <tr>
+                          <th>文件名</th>
+                          <th style="width: 15%;">日期</th>
+                          <th style="width: 7%">共享者</th>
+                          <th style="width: 8%">资源类型</th>
+                          <th style="width: 8%">文件大小</th>
+                          <th style="width: 8%;">操作</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <php>
+                          function change($length) {
+                          if ($length < 1024) return $length."B";
+                          if ($length < 1024*1024) return number_format(($length/1024), 2, '.', '')."K";
+                          if ($length < 1024*1024*1024) return number_format(($length/(1024*1024)), 2, '.', '')."M";
+                          if ($length < 1024*1024*1024*1024) return number_format(($length/(1024*1024*1024)), 2, '.', '')."G";
+                          }
+                      </php>
+                      <volist name="latestResource" id="vo">
+                          <php>
+                              $the_type = array(1 => "图片", 2 => "文件", 3 => "视频", 0 => "压缩包");
+                              $vo['rstype'] = $the_type[$vo['rstype']];
+                              $vo['rslength'] = change(intval($vo['rslength']));
+                          </php>
+
+                          <tr>
+                              <td><a href="__URL__/themeshow/id/<{$vo.id}>"><{$vo.rsname}></a></td>
+                              <td><{$vo.rsdate}></td>
+                              <td><{$vo.rsowner}></td>
+                              <td><{$vo.rstype}></td>
+                              <td><{$vo.rslength}></td>
+                              <td>
+                                  <a href="__URL__/deleteMs/id/<{$vo.id}>" >删除 <i class="fa fa-close"></i></a>
+                              </td>
+                          </tr>
+                      </volist>
+                      </tbody>
+                  </table>
+                <br><br>
+              </div>
+            </div>
+          </div>
+            <!-- 模态框（Modal）编辑 -->
+            <div class="modal fade" id="myModal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                Picture Gallery
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" action="__URL__/imgEdit" method="post">
+                                <input type="text" name="id" value="<{$vo.id}>">
+                                <input type="text" class="gallery_title" name="gallery_title" value="<{$vo.imgname}>" placeholder="Fill in the title, please">
+                                <textarea name="gallery_textarea" cols="90" rows="5" class="gallery_textarea" id="gallery_textarea"><{$vo.imgintro}></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- 模态框（Modal）编辑 -->
+            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                Picture Gallery
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" action="__URL__/imgEdit" method="post">
+                                <input type="text" name="id" value="<{$vo.id}>">
+                                <input type="text" class="gallery_title" name="gallery_title" value="<{$vo.imgname}>" placeholder="Fill in the title, please">
+                                <textarea name="gallery_textarea" cols="90" rows="5" class="gallery_textarea" id="gallery_textarea"><{$vo.imgintro}></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- 模态框（Modal）编辑 -->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                Picture Gallery
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" action="__URL__/imgEdit" method="post">
+                                <input type="text" name="id" value="<{$vo.id}>">
+                                <input type="text" class="gallery_title" name="gallery_title" value="<{$vo.imgname}>" placeholder="Fill in the title, please">
+                                <textarea name="gallery_textarea" cols="90" rows="5" class="gallery_textarea" id="gallery_textarea"><{$vo.imgintro}></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- 模态框（Modal）编辑 -->
+            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                Picture Gallery
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" action="__URL__/imgEdit" method="post">
+                                <input type="text" name="id" value="<{$vo.id}>">
+                                <input type="text" class="gallery_title" name="gallery_title" value="<{$vo.imgname}>" placeholder="Fill in the title, please">
+                                <textarea name="gallery_textarea" cols="90" rows="5" class="gallery_textarea" id="gallery_textarea"><{$vo.imgintro}></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- 模态框（Modal）编辑 -->
+            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                Picture Gallery
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" action="__URL__/imgEdit" method="post">
+                                <input type="text" name="id" value="<{$vo.id}>">
+                                <input type="text" class="gallery_title" name="gallery_title" value="<{$vo.imgname}>" placeholder="Fill in the title, please">
+                                <textarea name="gallery_textarea" cols="90" rows="5" class="gallery_textarea" id="gallery_textarea"><{$vo.imgintro}></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- 模态框（Modal）添加 -->
+            <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                Picture Gallery
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action="__URL__/addImagic" enctype="multipart/form-data" method="post">
+                                <input type="text" name = "ty" value="0" hidden>
+                                <input type="text" class="gallery_title" id="gallery_title" name="gallery_title" placeholder="请填写图片名称">
+                                <textarea name="gallery_textarea" cols="90" rows="5" class="gallery_textarea" id="gallery_textarea"></textarea>
+                                <br><input type="file" name="gallery_file"> <br>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                  <button type="submit" id="saveContent" class="btn btn-primary">添加</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+        </div> 		
+
+ 
+
+        <!--************************************************* 底部版权 *************************************************-->
+        <include file="./Application/Admin/View/Public/footer.html" />
+
+      </div>
+    </div>
+
+    <!--************************************************* publc JS *************************************************-->
+    <include file="./Application/Admin/View/Public/public_js.html" />
+    <!-- <script src="__PUBLIC__/back/include/datatables.net/js/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="__PUBLIC__/back/include/datatables.net-bs/js/dataTables.bootstrap.min.js"></script> -->
+  </body>
+</html>

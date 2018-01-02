@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/themeluanch.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/Css/wangEditor.css">
+	<link rel="stylesheet" href="__PUBLIC__/Css/wangEditor.min.css">
+
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+				<section>
+					<h3>学科交流</h3>
+					<ul class="ultop">
+						<li><a href="__APP__/Home/course/course">实践实习类</a></li>
+						<li><a href="__APP__/Home/course/course">专业基础类</a></li>
+						<li><a href="__APP__/Home/course/course">作物生产类</a></li>
+						<li><a href="__APP__/Home/course/course">植物保护类</a></li>
+						<li><a href="__APP__/Home/course/course">创新实验课程</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="rightc">
+				<div id="topicCon">
+					<div class="mini_nav">
+						<span class="mini_title">课程发布</span>
+					</div>
+					<div class="luanch">
+						<div class="form">
+							<div class="con_input"><sapn class="hint">课程：</sapn>
+							<select id="type" style="height: 35px;width: 120px;margin-top: 8px;">
+								<option value="0">实践实习类</option>
+								<option value="1">专业基础类</option>
+								<option value="2">作物生产类</option>
+								<option value="3">植物保护类</option>
+								<option value="4">创新实验课程</option>
+							</select></div><div class="clr"></div>
+							<div class="con_input"><sapn class="hint">标题：</sapn><input class='input' id="descripe" type="text" name="descripe"></div><div class="clr"></div>
+
+							<div class="con_input"><sapn class="hint">简述：</sapn> </div>
+							<div class="con_input">
+							<div class="clr"></div>
+							<div class="textinput">
+								<div id="editor">
+								</div>
+							</div><div class="clr"></div>
+							</div><div class="clr"></div>
+							<div class="con_input"><button id="submit" type="button">提交</button></div>
+						</div>
+					</div>
+				</div>	
+			</div>		
+			<div class="hottpc">
+					<div id="h_t_ti">热门课程话题</div>
+					<ul id="h_t_cont">
+						<li  class="h_t_con_ex"><span class="h_t_con_ex_num_c">1</span><a class="h_t_con_ex_tit" href="">说为何啵啵猝死家中 </a><span class="h_t_con_ex_heat">999</span></li>
+						<li  class="h_t_con_ex"><span class="h_t_con_ex_num_c">2</span><a class="h_t_con_ex_tit" href="">天宇为何无故。</a><span class="h_t_con_ex_heat">99</span></li>
+						<li  class="h_t_con_ex"><span class="h_t_con_ex_num_c">3</span><a class="h_t_con_ex_tit" href="">biaoti </a><span class="h_t_con_ex_heat">80</span></li>
+						<li  class="h_t_con_ex"><span class="h_t_con_ex_num">4</span><a class="h_t_con_ex_tit" href="">biaoti </a><span class="h_t_con_ex_heat">70</span></li>
+						<li  class="h_t_con_ex"><span class="h_t_con_ex_num">5</span><a class="h_t_con_ex_tit" href="">biaoti </a><span class="h_t_con_ex_heat">60</span></li>
+						<li  class="h_t_con_ex"><span class="h_t_con_ex_num">6</span><a class="h_t_con_ex_tit" href="">biaoti </a><span class="h_t_con_ex_heat">50</span></li>
+						<li  class="h_t_con_ex"><span class="h_t_con_ex_num">7</span><a class="h_t_con_ex_tit" href="">biaoti </a><span class="h_t_con_ex_heat">40</span></li>
+						<li  class="h_t_con_ex"><span class="h_t_con_ex_num">8</span><a class="h_t_con_ex_tit" href="">biaoti </a><span class="h_t_con_ex_heat">30</span></li>
+						<li  class="h_t_con_ex"><span class="h_t_con_ex_num">9</span><a class="h_t_con_ex_tit" href="">biaoti </a><span class="h_t_con_ex_heat">25</span></li>
+					</ul>
+			</div>	
+			<div class="clr"></div>
+		</div>
+			
+	</div>
+	<div class="clr"></div>
+	</div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/public/footer.html" />
+	</div>
+    <script type="text/javascript" src="__PUBLIC__/Js/wangEditor.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/wangEditor.min.js"></script>
+	<script src="__PUBLIC__/Js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+        var E = window.wangEditor;
+        var editor = new E( document.getElementById('editor') );
+        editor.create();
+        console.log(editor);
+        $(function () {
+            $('#submit').click(function () {
+                // 获取编辑器区域完整html代码
+                var html = editor.$textContainerElem.html();
+
+                // 获取编辑器纯文本内容
+                var text = editor.$textContainerElem.text();
+
+
+                var param = {
+                    mstype :$('#type').val(),
+					msname :$('#descripe').val(),
+                    msct:html
+                };
+
+                $.ajax({
+                    url: '__URL__/doThemeLaunch',//路径
+                    type: 'POST',
+                    dataType: 'json',
+                    data: param,
+                    success: function(data){
+                        alert("发布成功，等待管理员审核！");
+                        console.log(data);
+                        window.location.href="__URL__/course";//返回路径
+                    },
+                    error: function(xhr){
+                        alert("发布失败，请检查网络");
+                        console.log(xhr);
+                    }
+                });
+            });
+        });
+	</script>
+    <script src="__PUBLIC__/public/js/jquery-1.8.3.min.js" ></script>
+	
+	<script type="text/javascript" src="__PUBLIC__/face/js/logre.js"></script>
+
+</body>
+</html>

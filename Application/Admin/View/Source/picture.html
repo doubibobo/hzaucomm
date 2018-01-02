@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>华中农业大学实验教学中心互动平台</title>
+
+  	<link rel="shortcut icon" href="__ROOT__/back.ico" type="image/x-icon" />
+	  <!-- Bootstrap -->
+    <link href="__PUBLIC__/back/include/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 图标引入 -->
+    <link href="__PUBLIC__/back/include/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="__PUBLIC__/back/include/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="__PUBLIC__/back/css/custom.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/back/css/public.css" rel="stylesheet" >
+</head>
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <!--************************************************* 左导航 *************************************************-->
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            
+        <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_header.html" />
+              <br />
+
+              <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_middle.html" />
+
+              <!--  左导航底部 -->
+             <include file="./Application/Admin/View/Public/nav_footer.html" />
+
+          </div>
+        </div>
+
+        <!--************************************************* 顶导航 *************************************************-->
+        <include file="./Application/Admin/View/Public/top_nav.html" />
+      
+
+        <!--************************************************* 右内容 *************************************************-->
+	<div class="right_col" role="main">
+      <div class="col-md-12 col-sm-6 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>图片资源 <small>Picture </small></h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li class="panel_toolbox_li">
+                    <a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+                <li class="panel_toolbox_li"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              <div class="row">
+              <volist name="data" id="items">
+                <div class="col-md-55">
+                    <div class="thumbnail">
+                        <div class="image view view-first">
+                            <img style="width: 100%;height: 100%; display: block;" src="__ROOT__/<{$items.rsway}>" alt="image" />
+                            <div class="mask">
+                                <p><{$items.rsname}></p>
+                                <div class="tools tools-bottom">
+                                    <a class="picturetar" href="#" data-picdir="__ROOT__/<{$items.rsway}>" data-picdes="<{$items.rsdesp}>" data-toggle="modal" data-target="#myModal"><i class="fa fa-image"></i></a>
+                                    <a href="__URL__/imgDelete/id/<{$items.id}>"><i class="fa fa-times"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </volist>
+                <nav style="text-align:center;" >
+                  <ul class="pagination">
+                    <{$page}>
+                  </ul>
+                </nav>
+
+                <div style="width:100%;float:left;">
+                  <p style="color: red;"></p>
+                  <div data-toggle="modal" data-target="#myModal2" class="gallery_add">添加</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div> 
+        <!-- 模态框（Modal）添加 -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                &times;
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                Picture 
+              </h4>
+            </div>
+            <div class="modal-body">
+              <div class="pictureshow">
+                  <div class="picshowcon">
+                      <!-- <P><{$data.id}></P> -->
+                      <img style="width: 100%;height: 100%; display: block;" src="" alt="image" />
+                      <div class="picshowdes">
+                       <!-- <{$data.rsdesp}> -->
+                      </div>
+                  </div>
+              </div>
+            <div class="clearfix"></div>
+
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+      </div>
+      <!-- 模态框（Modal）添加 -->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                &times;
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                Picture
+              </h4>
+            </div>
+            <div class="modal-body">
+              <form action="__URL__/doAllUpdate" enctype="multipart/form-data" method="post">
+                  <input type="text" name = "type" value="1" hidden>
+                  <input type="text" class="gallery_title" id="gallery_title" name="title" placeholder="请填写图片名称">
+                  <textarea name="descripe" cols="90" rows="5" class="gallery_textarea" id="gallery_textarea"></textarea>
+                  <br><input type="file" name="photo"> <br>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" id="saveContent" class="btn btn-primary">添加</button>
+                  </div>
+              </form>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+      </div>
+		
+
+ 
+
+        <!--************************************************* 底部版权 *************************************************-->
+        <include file="./Application/Admin/View/Public/footer.html" />
+
+      </div>
+    </div>
+
+    <!--************************************************* publc JS *************************************************-->
+    <include file="./Application/Admin/View/Public/public_js.html" />
+    <!-- <script src="__PUBLIC__/back/include/datatables.net/js/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="__PUBLIC__/back/include/datatables.net-bs/js/dataTables.bootstrap.min.js"></script> -->
+    <script type="text/javascript">
+      $(function(){
+        var picturetar = $('.picturetar');
+        var myModal = $('#myModal');
+        var Mimg = myModal.find('img');
+        var Mpicshowdes = myModal.find('.picshowdes');
+        picturetar.click(function () {
+          Mimg.attr('src',this.getAttribute("data-picdir"));
+          Mpicshowdes.html(this.getAttribute("data-picdes"));
+        })
+      })
+
+    </script>
+  </body>
+</html>

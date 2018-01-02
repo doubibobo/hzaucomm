@@ -1,0 +1,87 @@
+#myform {
+	margin: 20px auto;
+	width: 550px;
+	padding: 5px;
+}
+#myform .con_input {
+	color: rgb(0,0,0,0.8);
+	margin: 10px 0 10px 30px;
+	font-size: 13px;
+
+}
+#myform .con_input .hint {
+	display: block;
+	float: left;
+	text-align: center;
+	margin: 10px 14px 0 0;
+	width: 90px;
+	height: 35px;
+	padding: 9px 0 8px 0px;
+	font-size: 15px;
+	color: #fff;
+	background: rgb(0,128,0);
+	border-radius:3px;
+}
+#myform .con_input .input {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 200px;
+	border: 1.5px solid #3ebb2b;
+	border-radius: 4px;
+	margin-top: 10px;	
+}
+#myform .con_input .textinput {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 135px;
+	width: 330px;
+	border-radius: 4px;
+	border: 1.5px solid #3ebb2b;
+}
+#myform .con_input .input:hover,
+#myform .con_input .textinput:hover,
+#myform .con_input .input:focus,
+#myform .con_input .textinput:focus {
+	border: 2px solid #3ebb2b;	
+}
+#myform .con_input option {
+	border: none;
+	box-shadow: 0 0 0 0 #fff;
+	display: block;
+	height: 28px;
+	min-height: 28px;
+	padding: 3px;
+	text-indent: 5px;
+	background: rgb(182,182,171,0.0);
+}
+#myform .con_input option:hover {
+	background: rgb(182,182,171);
+}
+#myform .con_input .inputfile {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 200px;
+	margin-top: 7px;
+}
+#myform #submit {
+	display: block;
+	height: 35px;
+	width: 100px;
+	margin: 20px auto;
+	border-radius: 3px;
+	border: 1.5px solid #3ebb2b;
+	transition: all 500ms;
+	background: #fff;
+}
+#myform #submit:hover {
+	border: 2px solid #3ebb2b;
+	background: #3ebb2b;
+}

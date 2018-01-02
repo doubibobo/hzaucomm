@@ -1,0 +1,24 @@
+.summary .con {
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+	padding: 15px 35px 10px 35px;
+	text-indent: 30px;
+	font-size: 15px;
+	font-family: sans-serif;
+	line-height: 23px;
+}
+.mini_nav .download {
+	padding: 25px 20px 0 0;
+    color: #65666d;
+    display: inline-block;
+    float: right;
+    font-size: 15px;
+    height: 33px;
+    text-decoration: none;
+    transition: all 350ms;
+}
+.mini_nav .download:hover{
+	color: rgb(33,169,0);
+	text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+.intro_contant {
+	float:left;
+}
+.intro_contant .intro_contant_mess {
+	min-height: 300px;
+	font-size: 15px;
+	margin-top: 15px;
+	text-indent: 25px;
+	line-height: 25px;
+	font-weight: ;
+	font-family: sans-serif;
+	z-index: 1;
+	padding: 10px 60px;
+}

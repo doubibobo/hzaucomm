@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/intro_index.css"/> 
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/Public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/Public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+			<section>
+				<h3>个人中心</h3>
+				<ul class="ultop">
+					<li><a href="__APP__/Home/User/index">基本信息</a></li>
+					<li><a href="__APP__/Home/User/application">我的申请</a></li>
+					<li><a href="__APP__/Home/User/message">我的消息</a></li>
+					<li><a href="__APP__/Home/User/theme">我的关注</a></li>
+				</ul>
+			</section>
+			</div>
+			<div class="rightc">
+					<div class="usercon">
+					<div class="mini_nav">
+						<span class="mini_title">基本信息</span>
+					</div>
+						<eq name="Think.session.usertype" value="1">
+							<div class="con">
+									<form method="post" action="__URL__/subStudentMes" enctype="multipart/form-data">
+										<li class="eachimg"><span>头　像：</span> </li><img src="__ROOT__<{$student.headimg}>"><input class="fileinput" type="file" name="img"><div class="clr"></div>
+										<div class="each"><span>账　号： </span><input type="text" name="username" value="<{$student.stuser}>"></div>
+										<div class="each"><span>用户名：</span><input type="text" name="name" value="<{$student.stname}>" readonly></div>
+										<div class="each"><span>学　号：</span><input type="text" name="grade" value="<{$student.stid}>" readonly></div>
+										<div class="each"><span>邮　箱：</span><input type="text" name="email" value="<{$student.email}>"></div>
+										<div class="each"><span>手　机：</span>
+											<input type="text" name="phone" value="<{$student.phonenumber}>">
+											<input class="submit" type="submit" name="submithahah" value="修改"></div>
+									</form>
+									<div class="eachbut"><button id="pwreset">密码修改</button></div>
+									<!-- <div class="eachbut"><button id="pwgetback">密码找回</button></div>				 -->
+							</div>　
+					　	</eq>
+				</div>
+				<div class="clr"></div>
+				<div id="topicCon">
+					<eq name="Think.session.usertype" value="0">
+						<p><{$Think.session.username}>您好，您当前为普通用户！</p>
+					</eq>
+					<!--<eq name="Think.session.usertype" value="1">-->
+						<!--<p><{$Think.session.username}>您好，您当前为学生用户！</p>-->
+						<!--<p>-->
+							<!--您的学号为 <{$student.stid}>-->
+						<!--</p>-->
+						<!--<p>-->
+							<!--你的姓名为<{$student.stname}>-->
+						<!--</p>-->
+					<!--</eq>-->
+					<eq name="Think.session.usertype" value="2">
+						<p><{$Think.session.username}>您好，您当前为教师用户！</p>
+						<p>
+							您的工号为 <{$student.stid}>
+						</p>
+						<p>
+							你的姓名为<{$student.stname}>
+						</p>
+					</eq>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<div class="clr"></div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/Public/footer.html" />
+	</div>
+	<!-- <div id="getback"><img id="close1" src="__PUBLIC__/face/images/icon/close.png">
+		<h1>找回密码</h1> 
+		<form id="backform">
+			<div class="conin"><span class="hint">新密码：</span><input type="text" name="newpassword"></div><div class="clr"></div>
+			<div class="conin"><span class="hint">确认密码：</span><input type="text" name="repassword"></div><div class="clr"></div>
+			<div class="conin"><span class="hint">邮箱验证：</span><input type="text" name="phone"><a href="">邮箱获取验证码</a></div><div class="clr"></div>
+			<div class="conin"><span class="hint">验证码：</span><input  type="text" name="repassword"></div><div class="clr"></div>
+			<div class="conin"><input id="submit" type="submit" name="submit" value="确认"></div><div class="clr"></div>
+		</form>
+	</div> -->
+	<div id="reset"><img id="close2" src="__PUBLIC__/face/images/icon/close.png">
+		<h1>修改密码</h1> 
+		<form id="setform" action="__URL__/subPws" method="post">
+			<div class="conin"><span class="hint">原始密码：</span><input type="text" name="expasswortd"></div><div class="clr"></div>
+			<div class="conin"><span class="hint">新密码：</span><input type="password" name="newpassword"></div><div class="clr"></div>
+			<div class="conin"><span class="hint">确认密码：</span><input type="password" name="repassword"></div><div class="clr"></div>
+			<div class="conin"><span class="hint">验证码：</span><input  type="text" name="code"></div><div class="clr"></div>
+			<div class="conin"><span class="verify"></span><img class="verifying" src="__APP__/Home/Header/verifyImg" alt="Code" id="regcode" onclick="this.src=this.src+'?'+Math.random()">
+				<!--<a onclick="this.src=this.src+'?'+Math.random()">看不清换一张</a>-->
+			</div><div class="clr"></div>
+			<div class="conin"><input id="submit" type="submit" name="submithahah" value="确认"></div><div class="clr"></div>
+		</form>
+	</div>
+	<script type="text/javascript" src="__PUBLIC__/face/Js/intro_index.js"></script>
+</body>
+</html>

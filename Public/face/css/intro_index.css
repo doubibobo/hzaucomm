@@ -1,0 +1,307 @@
+/*---------------------------------------topic---------------------------------------------------*/
+.usercon .con {
+	padding: 30px;
+}
+.usercon .con .each {
+	display: block;
+	height: 35px;
+	margin-bottom: 4px;
+	font-size: 16px;
+	line-height: 35px;
+}
+.usercon .con .each span {
+	float: left;
+	width: 80px;
+}
+.usercon .con .each input {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 200px;
+	border: 1px solid #3ebb2b;
+	border-radius: 4px;
+}
+.usercon .con .each .fileinput {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 45px;
+	width: 200px;
+	line-height: 45px;
+}
+.usercon .con .each input:focus{
+	border: 1.5px solid #3ebb2b;
+}
+.usercon .con .eachimg {
+	display: block;
+	float: left;
+	height: 50px;
+	margin-bottom: 4px;
+	font-size: 16px;
+	line-height: 50px;	
+}
+.usercon .con .eachimg span {
+	display: block;
+	width: 80px;
+}
+.usercon .con img {
+	height: 45px;
+	width: 45px;
+	margin-left: 10px;
+	margin-right: 15px;
+	display: block;
+	float: left;
+}
+.usercon .con .eachbut {
+	display: block;
+	float: left;
+	height: 50px;
+	margin-bottom: 14px;
+	font-size: 16px;
+	line-height: 50px;	
+}
+.usercon .con .eachbut button {
+	display: block;
+	height: 35px;
+	width: 100px;
+	margin: 20px 25px;
+	border-radius: 3px;
+	border: 1.5px solid #3ebb2b;
+	transition: all 500ms;
+	background: #fff;
+}
+.usercon .con .eachbut button:hover {
+	background: green;
+	color: #fff;
+}
+.usercon .con .eachsub {
+	display: block;
+	height: 30px;
+	margin-bottom: 4px;
+	line-height: 30px;	
+}
+.usercon .con .each .submit {
+	display: block;
+	height: 35px;
+	width: 100px;
+	margin: 0 0 0 10px;
+	border-radius: 3px;
+	border: 1.5px solid #3ebb2b;
+	transition: all 500ms;
+	background: #fff;
+
+}
+.usercon .con .each .submit:hover {
+	background: green;
+	color: #fff;
+}	
+/*****************getback******************/
+#getback {
+	display: none;
+	width: 450px;
+	background: #fff;
+	color: rgb(0,128,0);
+	border: 2px solid rgb(0,128,0);
+	position: absolute;
+	top:0;
+	left: 0;
+}
+#getback h1{
+	margin: 35px 0 0 25px;
+	color: rgb(0,128,0);
+}
+#getback #close1 {
+	display: block;
+	float: right;
+	margin:8px 10px;
+	height: 24px;
+	width: 24px;
+}
+#getback #close1:hover {
+	opacity: 0.7;
+}
+#getback #backform {
+	margin: 20px auto;
+	width: 550px;
+	padding: 5px;
+} 
+#getback #backform .conin {
+	color: rgb(0,0,0,0.8);
+	margin: 10px 0 10px 30px;
+	font-size: 13px;
+
+}
+#getback #backform .conin .hint {
+	display: block;
+	float: left;
+	text-align: center;
+	margin: 10px 14px 0 0;
+	width: 90px;
+	height: 35px;
+	padding: 9px 0 8px 0px;
+	font-size: 15px;
+	color: #fff;
+	background: rgb(0,128,0);
+	border-radius:3px;
+}
+#getback #backform .conin .verify {
+	display: block;
+	float: left;
+	margin: 10px 14px 0 0;
+	width: 90px;
+	height: 35px;
+	padding: 9px 0 8px 0px;
+}
+#getback #backform .conin .verifyimg {
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 80px;
+	/*border: 1.5px solid #3ebb2b;*/
+	border-radius: 4px;
+	margin-top: 10px;
+}
+#getback #backform .conin a {
+	display: block;
+	margin:10px 0 0 8px;
+	float: left;
+	height: 35px;
+	line-height: 35px;
+}
+#getback #backform .conin input {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 200px;
+	border: 1.5px solid #3ebb2b;
+	border-radius: 4px;
+	margin-top: 10px;	
+}
+#getback #backform .conin #submit {
+	display: block;
+	height: 35px;
+	width: 100px;
+	margin: 20px 0 20px 110px;
+	border-radius: 3px;
+	border: 1.5px solid #3ebb2b;
+	transition: all 500ms;
+	background: #fff;
+
+}
+#getback #backform .conin #submit:hover {
+	border: 2px solid #3ebb2b;
+	color: #fff;
+	background: green;
+
+}
+
+/*#getback */
+/*****************reset**************/
+#reset {
+display: none;
+width: 450px;
+position: absolute;
+top: 0;
+left: 0;
+background: #fff;
+border-radius: 3px;
+border: 2px solid rgb(0,128,0);
+}
+#reset #close2 {
+	display: block;
+	float: right;
+	margin:8px 10px;	
+	height: 24px;
+	width: 24px;
+}
+#reset #close2:hover {
+	opacity: 0.7;
+
+}
+#reset h1{
+	margin: 35px 0 0 25px;
+	color: rgb(0,128,0);
+}
+#reset #setform {
+	margin: 20px auto;
+	width: 550px;
+	padding: 5px;
+} 
+#reset #setform .conin {
+	color: rgb(0,0,0,0.8);
+	margin: 10px 0 10px 30px;
+	font-size: 13px;
+
+}
+#reset #setform .conin .hint {
+	display: block;
+	float: left;
+	text-align: center;
+	margin: 10px 14px 0 0;
+	width: 90px;
+	height: 35px;
+	padding: 9px 0 8px 0px;
+	font-size: 15px;
+	color: #fff;
+	background: rgb(0,128,0);
+	border-radius:3px;
+}
+#reset #setform .conin .verify {
+	display: block;
+	float: left;
+	margin: 10px 14px 0 0;
+	width: 90px;
+	height: 35px;
+	padding: 9px 0 8px 0px;
+}
+#reset #setform .conin .verifyimg {
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 80px;
+	/*border: 1.5px solid #3ebb2b;*/
+	border-radius: 4px;
+	margin-top: 10px;
+}
+#reset #setform .conin a {
+	display: block;
+	margin:10px 0 0 8px;
+	float: left;
+	height: 35px;
+	line-height: 35px;
+}
+#reset #setform .conin input {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 200px;
+	border: 1.5px solid #3ebb2b;
+	border-radius: 4px;
+	margin-top: 10px;	
+}
+#reset #setform .conin #submit {
+	display: block;
+	height: 35px;
+	width: 100px;
+	margin: 20px 0 20px 110px;
+	border-radius: 3px;
+	border: 1.5px solid #3ebb2b;
+	transition: all 500ms;
+	background: #fff;
+
+}
+#reset #setform .conin #submit:hover {
+	border: 2px solid #3ebb2b;
+	color: #fff;
+	background: green;
+
+}

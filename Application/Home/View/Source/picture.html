@@ -1,0 +1,70 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/picture.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.css"/>
+	<!-- <link rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css"/> -->
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+				<section>
+					<h3>资源共享</h3>
+					<ul class="ultop">
+						<li><a href="__APP__/Home/source/picture.html">图片</a></li>
+						<li><a href="__APP__/Home/source/document.html">文件</a></li>
+						<li><a href="__APP__/Home/source/video.html">视频</a></li>
+						<li><a href="__APP__/Home/source/zip.html">其他</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="rightc_nhot">
+				<div class="mini_nav">
+					<span class="mini_title">图片</span>
+				</div>
+				<div class="search_Button">
+					<form class="searchform" action="__URL__/search/type/1" method="post">
+						<div class="con_input"><input class='input' type="text" name="search"><input id="Ssubmit" type="submit" value="图片搜索" ></div><div class="clr"></div>
+					</form>
+				</div>
+				<div class="picturecon">
+					<volist name="data" id="items">
+						<div class="ex_pic">
+							<a href="__APP__/Home/source/pictureshow/id/<{$items.id}>"><img class="picture" src="__ROOT__/<{$items.rsway}>"></a>
+							<div class="cont">
+								<span class="descri"><{$items.rsname}></span><br>
+							</div>
+						</div>
+					</volist>
+					<nav style="text-align:center;" >
+						<ul class="pagination">
+							<{$page}>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clr"></div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/public/footer.html" />
+	</div>
+    <script src="__PUBLIC__/public/js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__/face/js/logre.js"></script>
+	
+</body>
+</html>

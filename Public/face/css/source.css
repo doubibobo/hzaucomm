@@ -1,0 +1,201 @@
+
+/*--------------------------------Cright的部分-----------------------------------*/
+.minihead {
+	height: 35px;
+	width: 97%;
+	border-bottom: 1px solid  rgb(0,128,0);
+}
+.m_h_title {
+	line-height: 40px;
+	display:block;
+	float: left;
+	border-bottom: 2px solid  rgb(0,128,0);
+}
+.m_h_title a {
+	color: rgb(0,128,0);
+}
+.m_h_more {
+	display: block;
+	float: right;
+	margin-top: 14px;
+	margin-right: 20px;
+	font-size: 10px;
+}
+.m_h_more a {
+	color: rgb(0,128,0);
+}
+.m_h_more a:hover {
+	text-decoration: underline;
+
+}
+/*----------------------------------- #cr_w ,#cr_v,#cr_r(Cright)----------------------------------------------*/
+		.c_con {
+			box-shadow: 0px 0px 2px #888888;
+			width: 100%;
+			height: 15px;
+			padding-top:10px;
+			padding-right: 20px;
+
+		}
+		.c_c_ex {
+			margin-top: 12px;
+			text-indent: 6px;
+			width: 100%;
+			height: 15px;
+			padding-left: 15px;
+			
+		}
+		.point {
+			height: 5px;
+			width: 5px;
+			background: #b8b8b8;
+			border-radius: 50%;
+			position: relative;
+			top: 0;
+			left: 0px;
+			margin-left: 6px;
+			margin-right: 8px;
+			margin-top: 6px;
+			float: left;
+		}
+		.c_c_e_title {
+			display: block;
+			width: 80%;
+			float: left;
+			color: #666;
+			font-size: 14px;
+			text-overflow:ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+	margin-top: 2px;
+
+		}
+		.c_c_e_title:hover {
+			color: #21a900;
+			text-indent: 0px;
+			transition-property: color;
+			transition-duration: 0.3s;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-ms-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+		.c_c_e_title:hover .point {
+			background:#21a900;
+			margin-left: 0px;
+			transition-property: color;
+			transition-duration: 0.3s;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-ms-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}.c_c_ex_time {
+			display: block;
+			float: right;
+			width: 10%;
+			font-size: 10px;
+			color: #999;
+		}
+		.c_c_ex:hover .c_c_ex_time {
+			color:#21a900;
+			margin-left: 0px;
+			transition-property: color;
+			transition-duration: 0.3s;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-ms-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+/*-------------------------------------Cright------------------------------------------------*/
+#Cright {
+	width: 100%;
+	float: left;
+	box-shadow: 0px 0px 1px #888888;
+	margin: 0 auto;
+	padding-bottom: 10px;
+
+}
+
+#cr_w ,#cr_v,#cr_r{
+	width: 95%;
+	/*height: 150px;*/
+	margin-top: 10px;
+	padding-left: 2px;
+	padding-top: 2.5px;
+	padding-bottom: 5px;
+}
+#cr_p {
+	width: 95%;
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+.cr_mi_ti a{
+	color: green;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	margin-left: 8px;
+	line-height: 8px;
+	font-size: 11.5px;
+	font-weight: lighter;
+	padding-bottom: 2px;
+	width: 65px;
+	text-indent: 3px;
+	border-bottom: 1px solid rgb(0,128,0);
+}
+.cr_mi_ti a:hover {
+	border-bottom: 2px solid rgb(0,128,0);
+}
+#cr_p_r {
+	width: 95%;
+	height: 200px;
+	overflow: hidden;
+}
+#cr_p_r_long {
+	width: 600%;
+	position: relative;
+	left: 0px;
+	top:0;
+}
+.cr_p_r_ex1,
+.cr_p_r_ex2
+ {
+	display: block;
+	height: 160px;
+	width: 150px;
+	float: left;
+	margin-left: 18px;
+}
+.cr_p_r_ex1
+ {
+	margin-top: 5px;
+}
+.cr_p_r_ex2 {
+	margin-top: 30px;
+}
+.cr_p_r_first ,
+.cr_p_r_second {
+	width: 100%;
+	height: 100%;
+}
+
+#cr_p_r_botton {
+	margin: 8px auto;
+	width: 85px;
+	height: 12px;
+}	
+.cr_p_r_b_dot {
+	height: 8px;
+	width: 8px;
+	border-radius: 50%;
+	background: #666;
+	float: left;
+	margin-left: 8px;
+}
+.cr_p_r_b_dot:hover {
+	background: #21a900;
+	cursor: pointer;
+}
+/*-----------------------------------end Cright----------------------------------------------*/

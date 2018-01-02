@@ -1,0 +1,40 @@
+.connect {
+	min-height: 300px;
+	width: 80%;
+	margin: 0 auto;
+}
+.per {
+	width: 100%;
+	min-width: 100px;
+	padding: 5px 20px;
+}
+.per img {
+	width: 140px;
+	min-width: 100px;
+	height: 150px;
+	border-radius: 50%;
+	padding: 10px;
+	display: block;
+	float:left;
+	margin-right:  8px;
+}
+.per li {
+	display: block;
+	float: left;
+	width: 60%;
+	margin-top: 8px;
+	height: 35px;
+}
+.per li .Meta {
+	display: inline-block;
+	width: 75px;
+	text-indent: 8px;
+	font-size: 16px;
+	font-family: Serif;
+	font-weight: 600;
+}
+.per li .det {
+	display: inline-block;
+	margin-left: 5px;
+	font-size: 14px;
+}

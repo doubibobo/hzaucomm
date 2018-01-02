@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>华中农业大学实验教学中心互动平台</title>
+
+    <link rel="shortcut icon" href="__ROOT__/back.ico" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link href="__PUBLIC__/back/include/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 图标引入 -->
+    <link href="__PUBLIC__/back/include/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- to DO list的对勾 -->
+    <link href="__PUBLIC__/back/include/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="__PUBLIC__/back/include/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="__PUBLIC__/back/css/custom.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/back/css/public.css" rel="stylesheet" >
+</head>
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <!--************************************************* 左导航 *************************************************-->
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            
+        <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_header.html" />
+              <br />
+
+              <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_middle.html" />
+
+              <!--  左导航底部 -->
+             <include file="./Application/Admin/View/Public/nav_footer.html" />
+
+          </div>
+        </div>
+
+        <!--************************************************* 顶导航 *************************************************-->
+        <include file="./Application/Admin/View/Public/top_nav.html" />
+      
+
+        <!--************************************************* 右内容 *************************************************-->
+  		<div class="right_col" role="main">   
+        <div class="col-md-12 col-sm-6 col-xs-12">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>平台公告 <small>Platform announcement</small></h2>
+                <ul class="nav navbar-right panel_toolbox">                            
+                  <li class="panel_toolbox_li"><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                  <li class="panel_toolbox_li"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                  <input type="text" id="gallery_title" class="gallery_title" name="gallery_title" value="<{$data.infoname}>" placeholder="Fill in the title, please">
+                  <input type="text" id="idInfor" value="<{$data.id}>" hidden>
+                     <script id='container' style="height:350px;" name='content' type="text/plain"><{$data.infoct}></script>
+                  <br><button type="button" id="saveContent" class="btn btn-primary">Submit</button>
+                  <script src="__PUBLIC__/Js/jquery-3.1.1.min.js"></script>
+                  <!--配置文件-->
+                  <script type="text/javascript" src="__PUBLIC__/Ueditor/ueditor.config.js">
+                  </script>
+                   <!--编译器源码文件-->
+                  <script type="text/javascript" src="__PUBLIC__/Ueditor/ueditor.all.js">
+                  </script>
+                  <!--实例化编译器-->
+                  <script type="text/javascript">
+                      $(function () {
+                          var ue=UE.getEditor ('container');
+                          $('#saveContent').click(function () {
+                              var html = ue.getContent();
+                              var param = {
+                                  id:$('#idInfor').val(),
+                                  title:$('#gallery_title').val(),
+                                  content:html
+                              };
+                              $.ajax({
+                                  url: '__URL__/infoUpdate',//路径
+                                  type: 'POST',
+                                  dataType: 'json',
+                                  data: param,
+                                  success: function(data){
+                                      console.log(data);
+                                      window.location.href="";//返回路径？
+                                  },
+                                  error: function(xhr){
+                                      alert("失败");
+                                      console.log(xhr);
+                                  }
+                              });
+                          });
+                      });
+                  </script><br>
+              </div>
+            </div>
+          </div>
+      </div> 		
+        <!--************************************************* 底部版权 *************************************************-->
+        <include file="./Application/Admin/View/Public/footer.html" />
+      </div>
+    </div>
+
+    <!--************************************************* publc JS *************************************************-->
+    <include file="./Application/Admin/View/Public/public_js.html" />
+    <!-- <script src="__PUBLIC__/back/include/datatables.net/js/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="__PUBLIC__/back/include/datatables.net-bs/js/dataTables.bootstrap.min.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>华中农业大学实验教学中心互动平台</title>
+
+  	<link rel="shortcut icon" href="__ROOT__/back.ico" type="image/x-icon" />
+	  <!-- Bootstrap -->
+    <link href="__PUBLIC__/back/include/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 图标引入 -->
+    <link href="__PUBLIC__/back/include/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="__PUBLIC__/back/include/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="__PUBLIC__/back/css/custom.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/back/css/public.css" rel="stylesheet" >
+</head>
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <!--************************************************* 左导航 *************************************************-->
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            
+        <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_header.html" />
+              <br />
+
+              <!-- 左导航中部 -->
+            <include file="./Application/Admin/View/Public/nav_middle.html" />
+
+              <!--  左导航底部 -->
+             <include file="./Application/Admin/View/Public/nav_footer.html" />
+
+          </div>
+        </div>
+
+        <!--************************************************* 顶导航 *************************************************-->
+        <include file="./Application/Admin/View/Public/top_nav.html" />
+      
+
+        <!--************************************************* 右内容 *************************************************-->
+		<div class="right_col" role="main">
+          <div class="col-md-10 col-sm-12 col-xs-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>评论 审批<small>Comment </small></h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li class="panel_toolbox_li"><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                        <li class="panel_toolbox_li"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                    <h4>标题<{$data.r_name}></h4>
+                    <div class="x_content">              
+                       浪漫的五月总能营造出绚丽多姿的色彩，总能姿意 出淡雅清新的情愫。五月风，越过高山的坎坎坷坷，拂去了岁月的 尘埃，五月的风，如诗人的笔，如画家的五彩，将 绿色覆盖每一片荒凉，让大地换上了新装。五月风，洋溢着笑脸， 灿烂着每一朵花儿，用希望的手叩响了沉睡的天空 ，吹散了糜烂，吹走了腐味，带来了清晰。五月风，轻轻地从耳边 吹过，柔柔的，软软的，象一朵云彩轻拂着我的脸 。她是从春天的阳光中走来，从大山深处穿越而来，带着花草的清 香，带着放飞的梦想，一路欢歌，把大地点缀得如 诗如画。五月风，记载着一个个美丽的传说，每一个传说都化做一 片云彩，弥漫在整个天空。 <{$data.r_content}>
+                    </div>
+                  </div>
+          </div>
+    </div> 		
+
+ 
+
+        <!--************************************************* 底部版权 *************************************************-->
+        <include file="./Application/Admin/View/Public/footer.html" />
+
+      </div>
+    </div>
+
+    <!--************************************************* publc JS *************************************************-->
+    <include file="./Application/Admin/View/Public/public_js.html" />
+    <!-- <script src="__PUBLIC__/back/include/datatables.net/js/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="__PUBLIC__/back/include/datatables.net-bs/js/dataTables.bootstrap.min.js"></script> -->
+  </body>
+</html>

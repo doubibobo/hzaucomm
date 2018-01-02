@@ -1,0 +1,41 @@
+<div class="rightc">
+    <div id="topicCon">
+        <div class="mini_nav">
+            <span class="mini_title">课程</span>
+            <a href="__APP__/Home/Comp/themeluanch"><button class="button">发表新主题</button></a>
+        </div>
+        <div>
+            <volist name="theThemes" id="items">
+                <div class="topic">
+                    <div class="substance">
+                        <div class="substance_top">
+                            <div class="s_t_title"><a href="__APP__/Home/course/showitem/id/<{$items.id}>">讨论交流主题 <{$items.msname}></a></div>
+                            <div class="author">
+                                <span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/person.png" alt="" class="icon_a" title="主题作者" ) no-repeat;"><{$items.msowner}></span>
+                                <span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/time.png" alt="" class="icon_a" title="发布时间" ) no-repeat;"><{$items.msdate}></span>
+                                <span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/comment.png" alt="" class="icon_a" title="评论量" ) no-repeat;"><{$items.mshaving}></span>
+                                <span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/prise.png" alt="" class="icon_a" title="评论量" ) no-repeat;"><{$items.mslike}></span>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                        <div class="substance_down">
+                            <php>
+                                $items['msct'] = preg_replace('/<([a-z]+?)\s+?.*?>/i','<$1>',$items['msct']);
+                                $qian=array(" ","　","\t","\n","\r");
+                                $hou=array("","","","","");
+                                $items['msct'] = str_replace($qian,$hou,$items['msct']);
+                                $items['msct'] = strip_tags($items['msct']);
+                            </php>
+                            <div class="s_d_reply"><{$items.msct}></div>
+                            <div class="replyer">
+                                <span class="s_d_l"><img src="__PUBLIC__/face/images/icon/person.png" alt="" class="icon_r" title="最新回复人" ) no-repeat;">朱传波</span>
+                                <span class="s_d_l"><img src="__PUBLIC__/face/images/icon/time.png" alt="" class="icon_r" title="回复时间" ) no-repeat;">17：01</span>
+                            </div><div class="clr"></div>
+                        </div>
+                    </div>
+                </div>
+            </volist>
+            <div class="clr"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="hottpc">
+    <div id="h_t_ti">热门课程话题</div>
+    <ul id="h_t_cont">
+        <volist name="hotThemes" id="vo">
+            <if condition="$i lt 4">
+                <!--<li  class="h_t_con_ex"><span class="h_t_con_ex_num"></span><a class="h_t_con_ex_tit" href=""><{$vo.msname}> </a><span class="h_t_con_ex_heat"><{$vo.mshaving}></span></li>-->
+                <li  class="h_t_con_ex"><span class="h_t_con_ex_num_c"><php>echo $i;</php></span><a class="h_t_con_ex_tit" href="__APP__/Home/Course/showitem/id/<{$vo.id}>"><{$vo.msname}></a><span class="h_t_con_ex_heat"><{$vo.mshaving}></span></li>
+                <else />
+                <li  class="h_t_con_ex"><span class="h_t_con_ex_num"><php>echo $i;</php></span><a class="h_t_con_ex_tit" href="__APP__/Home/Course/showitem/id/<{$vo.id}>"><{$vo.msname}></a><span class="h_t_con_ex_heat"><{$vo.mshaving}></span></li>
+            </if>
+        </volist>
+    </ul>
+</div>

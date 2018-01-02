@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/course.css"/>
+
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+				<section>
+					<h3>学科交流</h3>
+					<ul class="ultop">
+						<li><a href="__APP__/Home/course/course">实践实习类</a></li>
+						<li><a href="__APP__/Home/course/course1">专业基础类</a></li>
+						<li><a href="__APP__/Home/course/course2">作物生产类</a></li>
+						<li><a href="__APP__/Home/course/course3">植物保护类</a></li>
+						<li><a href="__APP__/Home/course/course4">创新实验课程</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="rightc">
+				<div id="topicCon">
+					<div class="mini_nav">
+						<span class="mini_title">课程</span>
+						<a href="__APP__/Home/course/themeluanch"><button class="button">发表新主题</button></a>
+					</div>
+					<div>
+						<volist name="checkedMs" id="items">
+							<div class="topic">
+								<div class="substance">
+									<div class="substance_top">
+										<div class="s_t_title"><a href="__APP__/Home/course/showitem/id/<{$items.id}>">讨论交流主题 <{$items.msname}></a></div>
+										<div class="author">
+											<span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/person.png" alt="" class="icon_a" title="主题作者" ) no-repeat;"><{$items.theOwner.stuser}></span>
+											<span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/time.png" alt="" class="icon_a" title="发布时间" ) no-repeat;"><{$items.msdate}></span>
+											<span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/comment.png" alt="" class="icon_a" title="评论量" ) no-repeat;"><{$items.mshaving}></span>
+											<span  class="s_t_l"><img  src="__PUBLIC__/face/images/icon/prise.png" alt="" class="icon_a" title="评论量" ) no-repeat;"><{$items.mslike}></span>
+										</div>
+									</div>
+									<div class="clr"></div>
+									<div class="substance_down">
+										<php>
+											$items['msct'] = preg_replace('/<([a-z]+?)\s+?.*?>/i','<$1>',$items['msct']);
+											$qian=array(" ","　","\t","\n","\r");
+											$hou=array("","","","","");
+											$items['msct'] = str_replace($qian,$hou,$items['msct']);
+											$items['msct'] = strip_tags($items['msct']);
+										</php>
+										<div class="s_d_reply"><{$items.msct}></div>
+<!-- 										<div class="replyer">
+											<span class="s_d_l"><img src="__PUBLIC__/face/images/icon/person.png" alt="" class="icon_r" title="最新回复人" ) no-repeat;">朱传波</span>
+											<span class="s_d_l"><img src="__PUBLIC__/face/images/icon/time.png" alt="" class="icon_r" title="回复时间" ) no-repeat;">17：01</span>
+										</div><div class="clr"></div> -->
+									</div>
+								</div>
+							</div>
+						</volist>
+						<div class="clr"></div>
+					</div>
+				</div>	
+			</div>			
+			<div class="hottpc">
+				<div id="h_t_ti">热门课程话题</div>
+				<ul id="h_t_cont">
+					<volist name="hotThemes" id="vo">
+						<if condition="$i lt 4">
+							<!--<li  class="h_t_con_ex"><span class="h_t_con_ex_num"></span><a class="h_t_con_ex_tit" href=""><{$vo.msname}> </a><span class="h_t_con_ex_heat"><{$vo.mshaving}></span></li>-->
+							<li  class="h_t_con_ex"><span class="h_t_con_ex_num_c"><php>echo $i;</php></span><a class="h_t_con_ex_tit" href="__URL__/showitem/id/<{$vo.id}>"><{$vo.msname}></a><span class="h_t_con_ex_heat"><{$vo.mshaving}></span></li>
+							<else />
+							<li  class="h_t_con_ex"><span class="h_t_con_ex_num"><php>echo $i;</php></span><a class="h_t_con_ex_tit" href="__URL__/showitem/id/<{$vo.id}>"><{$vo.msname}></a><span class="h_t_con_ex_heat"><{$vo.mshaving}></span></li>
+						</if>
+					</volist>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div class="clr"></div>
+	</div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/public/footer.html" />
+	</div>
+    <script src="__PUBLIC__/public/js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__/face/js/logre.js"></script>
+
+</body>
+</html>

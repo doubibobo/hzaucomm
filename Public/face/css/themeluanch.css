@@ -1,0 +1,70 @@
+.rightc .luanch {
+	margin: 20px auto;
+	width: 750px;
+	padding: 5px;
+}
+.rightc .luanch .con_input {
+	color: rgb(0,0,0,0.8);
+	margin: 10px 0 10px 30px;
+	font-size: 13px;
+
+}
+.rightc .luanch .con_input .hint {
+	display: block;
+	float: left;
+	margin: 8px 14px 0 0;
+	width: 65px;
+	height: 35px;
+	padding: 9px 0 8px 13px;
+	font-size: 15px;
+	color: #fff;
+	background: rgb(0,128,0);
+	border-radius:3px;
+}
+.rightc .luanch .con_input .input {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 200px;
+	border: 1.5px solid #3ebb2b;
+	border-radius: 4px;
+	margin-top: 10px;
+}
+.rightc .luanch .con_input .areainput {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 135px;
+	width: 330px;
+	border-radius: 4px;
+	border: 1.5px solid #3ebb2b;
+}
+.rightc .luanch .con_input .input:hover,
+.rightc .luanch .con_input .areainput:hover,
+.rightc .luanch .con_input .input:focus,
+.rightc .luanch .con_input .areainput:focus {
+	border: 2px solid #3ebb2b;
+}
+.rightc .luanch #submit {
+	display: block;
+	height: 35px;
+	width: 100px;
+	margin: 10px 80px;
+	border: 1.5px solid #3ebb2b;
+	background: #fff;
+	border-radius: 3px;
+	transition: all 500ms;
+}
+.rightc .luanch #submit:hover {
+	border: 2px solid #3ebb2b;
+	background: #3ebb2b;
+}
+.rightc .luanch .con_input select {
+}
+.rightc .luanch .textinput {
+	margin-top: 8px;
+	width: 85%;
+}

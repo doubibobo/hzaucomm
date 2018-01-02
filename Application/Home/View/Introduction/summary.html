@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/summary.css"/>
+
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+				<section>
+					<h3>平台概况</h3>
+					<ul class="ultop">
+						<li><a href="__APP__/Home/introduction/introduction">平台概况</a></li>
+						<li><a href="__APP__/Home/introduction/notice">通知公告</a></li>
+						<li><a href="__APP__/Home/introduction/connect">联系我们</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="rightc_nhot">
+				<div class="mini_nav">
+					<span class="mini_title"><{$data.infoname}></span>
+				</div>
+				<div class="summary">
+					<p>
+						&nbsp;&nbsp;&nbsp;<{$data.infotime}>&nbsp;&nbsp;&nbsp;<{$data.infoowner}>
+					</p>
+					<p class="con">
+						<{$data.infoct}>
+					</p>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div class="clr"></div>
+	</div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/public/footer.html" />
+	</div>
+    <script src="__PUBLIC__/public/js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__/face/js/logre.js"></script>
+	
+</body>
+</html>

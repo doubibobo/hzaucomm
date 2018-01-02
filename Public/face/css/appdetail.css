@@ -1,0 +1,107 @@
+#comment {
+	width: 100%;
+	padding: 10px;
+	margin: 2px 0 5px 0;
+	/*box-shadow: #eee 0 0 1px 1px ;*/
+}
+#comment .sigleconmment {
+	border-top: 1px dashed #f0f2f7;
+	margin-top: 5px;
+}
+#comment .s_m_left {
+	width: 15%;
+	float: left;
+}
+#comment .sigleconmment .s_m_left .replay {
+	display: block;
+	width: 30px;
+	margin: 0px auto;
+	color: rgb(118,143,168);
+	margin-top: 20px;
+	cursor: pointer;
+}
+#comment .sigleconmment .s_m_left .replay:hover {
+	color:rgb(71,152,31);
+}
+#comment .sigleconmment .s_m_left .commentor {
+	font-size:14px;
+	display: block;
+	float: left;
+	color: rgb(0,128,0);
+	margin-top: 20px;
+	margin-left: 15px;
+}
+#comment .s_m_right {
+	width: 85%;
+	float: right;
+	min-height: 200px;
+}
+#comment .sigleconmment .s_m_right .comment_con {
+	width: 100%;
+	padding: 15px;
+	line-height: 22px;
+	min-height: 150px;
+	letter-spacing: 1.5px;
+	text-indent: 15px;
+	line-height: 28px;
+	font-size: 14px;
+}
+#comment .sigleconmment .s_m_right .comment_time {
+	display: block;
+	float: right;
+	margin-right: 25px;
+}
+#reply_h {
+	position: absolute;
+	top:0;
+	left:0;
+	display: none;
+	width: 350px;
+	height: 260px;
+	border: 2px solid rgb(0,128,0);
+	padding: 5px;
+	border-radius: 2px;
+	margin: 25px auto;
+	background: #fff;
+}
+#reply_h .con_input {
+	color: rgb(0,0,0,0.8);
+	width: 300px;
+	margin: 30px auto;
+	font-size: 13px;
+
+}
+#reply_h .con_input .hint {
+	display: block;
+	float: left;
+	margin-top: 8px;
+	width: 80px;
+}
+#reply_h .con_input .input {
+	padding: 3px;
+	text-indent: 3px;
+	display: block;
+	float: left;
+	height: 150px;
+	width: 300px;
+	background: rgb(175,169,157,0.1);
+	border: 1px solid green;	
+}
+#reply_h .con_input .input:hover {
+	border: 2px solid green;	
+}
+#reply_h #submit {
+	color: rgb(33,169,0);
+	display: block;
+	height: 40px;
+	width: 65px;
+	margin: 20px auto;
+	/*background: rgb(137,130,128);*/
+	border: 2px solid green;
+	transition: all 250ms;
+	border-radius: 5px;
+}
+#reply_h #submit:hover {
+	background: rgb(247,246,245);
+	border: 1px solid green;
+}

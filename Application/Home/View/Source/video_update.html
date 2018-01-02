@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/update.css"/>
+
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+				<section>
+					<h3>资源上传</h3>
+					<ul class="ultop">
+						<li><a href="__APP__/Home/source/pic_update.html">图片上传</a></li>
+						<li><a href="__APP__/Home/source/document_update.html">文件上传</a></li>
+						<li><a href="__APP__/Home/source/video_update.html">视频上传</a></li>
+						<li><a href="__APP__/Home/source/zip_update.html">其他上传</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="rightc_nhot">
+				<div class="mini_nav">
+					<span class="mini_title">视频上传</span>
+				</div>
+				<form id='myform' action="__URL__/doAllUpdate/type/3" enctype="multipart/form-data" method="post"  >
+	                <div class="con_input"><sapn class="hint">视频标题：</sapn><input class='input' type="text" name="title"></div><div class="clr"></div>
+					<div class="con_input"><sapn class="hint">视频描述：</sapn><textarea class='textinput' type="text" name="descripe"></textarea></div><div class="clr"></div>
+					<div class="con_input"><span class="hint">选择视频</span><input class='inputfile' type="file" name="photo"></div><div class="clr"></div>
+					<div class="con_input"><input id='submit' type="submit" value="提交"></div>
+					<div class="clr"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="clr"></div>
+	</div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/public/footer.html" />
+	</div>
+    <script src="__PUBLIC__/public/js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__/face/js/logre.js"></script>
+	
+</body>
+</html>

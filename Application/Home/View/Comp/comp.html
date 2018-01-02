@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,user-scalable=yes" />
+ 	<title>实验教学中心互动平台</title>
+	<link rel="shortcut icon" href="__ROOT__/logo.ico">
+	<link rel="stylesheet" href="__PUBLIC__/face/css/public.css"/>
+	<link rel="stylesheet" href="__PUBLIC__/face/css/comp.css"/>
+ 
+</head>
+<body>
+	<div id="Cheader">
+		<include file="./Application/Home/View/Index/Public/header.html" />
+	</div>
+
+	<div id="Cnav">
+		<include file="./Application/Home/View/Index/Public/nav.html" />
+	</div>
+
+	<div id="Cmain">
+		<div class="Ccontainer">
+			<div id="main_nav">
+			<section>
+				<h3>综合交流</h3>
+				<ul class="ultop">
+					<li><a href="__APP__/Home/comp/comp2">最近主题</a></li>
+					<li><a href="__APP__/Home/comp/comp1">热门主题</a></li>
+				</ul>
+			</section>
+			</div>
+			<eq name="Think.session.username" value="">
+				<p>您还未登录</p>
+				<php>
+					echo md5(12151618);
+				</php>
+				<else />
+					<p>欢迎您：<{$Think.session.username}></p>
+			</eq>
+			<include file="./Application/Home/View/Comp/hahaha.html" />
+		</div>
+	</div>
+	<div class="clr"></div>
+	<div id="Cfooter">
+		<include file="./Application/Home/View/Index/Public/footer.html" />
+	</div>
+	<script src="__PUBLIC__/public/js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__/face/js/logre.js"></script>
+</body>
+</html>
