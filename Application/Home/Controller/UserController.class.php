@@ -325,7 +325,8 @@ class UserController extends Controller {
      * @return string id值
      */
     private function getId() {
-        (empty(trim($_GET['id'])) || !is_numeric(trim($_GET['id']))) ? $this->error("程序内部错误") : $id = trim($_GET['id']);
+        $theID = trim($_GET['id']);
+        (empty($theID) || !is_numeric($theID)) ? $this->error("程序内部错误") : $id = $theID;
         return $id;
     }
 

@@ -76,7 +76,7 @@ class CompController extends Controller {
      * 方法功能；查询登录用户的相关信息
      */
     public function getUserMessage($database) {
-        $model = M($database, 'tp_', 'DB_CONFIG1');
+        $model = M($database, 'tp_', 'DB_CONFIG2');
         return $model -> where("id = $_SESSION[id]")->getField("username");
     }
 }
