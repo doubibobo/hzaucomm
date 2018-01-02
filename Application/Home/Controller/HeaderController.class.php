@@ -11,6 +11,7 @@ use Think\Controller;
 class HeaderController extends Controller {
     //显示验证码
     public function verifyImg(){
+    	ob_clean();
         $verify = new \Think\Verify();
         //$verify->useZh = true;  //使用中文验证码
         $verify->length = 4;
