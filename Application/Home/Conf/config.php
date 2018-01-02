@@ -13,7 +13,7 @@ return array(
         //设置服务器名称
         'DB_NAME' => 'zkycomm',
         //设置服务器角色名称
-        'DB_USER' => 'root',
+        'DB_USER' => 'doubibobo',
         //设置服务器角色密码
         'DB_PWD' => '12151618',
         //设置服务器端口
@@ -31,7 +31,7 @@ return array(
         'DB_TYPE'=>'mysql',
         'DB_HOST'=>'127.0.0.1',
         'DB_NAME' => 'zkyuser',
-        'DB_USER'=>'root',
+        'DB_USER'=>'doubibobo',
         'DB_PWD'=>'12151618',
         'DB_PORT' =>'3306',
         'DB_PREFIX' => 'tp_',
