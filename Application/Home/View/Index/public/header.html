@@ -8,7 +8,8 @@
             <p><a href="#" class="logBut">学生登录</a> | <a href="#" class="logBut">教师登录</a> | <a href="#" class="reg_link">注册</a></p><br/>
             <!-- 判断登陆后        显示下面这行代码 -->
           <else/>
-            <p><a href="#">访问旧版</a> | <{$Think.session.username}>你好！ | <a href="__APP__/Home/User/index">个人中心</a> | <a href="__APP__/Home/User/loginout">退出</a></p><br/>
+            <!-- <p><a href="#">访问旧版</a> | -->
+            <{$Think.session.username}>你好！ | <a href="__APP__/Home/User/index">个人中心</a> | <a href="__APP__/Home/User/loginout">退出</a></p><br/>
           </eq>
       </div>
       <form action="__APP__/Home/index/glo_search" method="post" id="sitesearch">
