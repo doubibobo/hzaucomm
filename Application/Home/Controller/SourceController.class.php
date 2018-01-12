@@ -227,7 +227,10 @@ class SourceController extends Controller {
      * @return bool 返回值
      */
     private function isNullOp($file_name, $data) {
-        return (empty($file_name) or empty(trim($data['title'])) or empty(trim($data['descripe']))) ? false : true;
+        $filename = empty($file_name);
+        $descripe = trim($data['descripe']));
+        $title = trim($data['title']);
+        return (empty($file_name) or empty($descripe) or empty($title) ? false : true;
     }
 
     /**
