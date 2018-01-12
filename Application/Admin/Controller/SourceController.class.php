@@ -128,7 +128,9 @@ class SourceController extends Controller {
 
     // 判断各项是否填写完整
     private function isNullOp($file_name, $data) {
-        return (empty($file_name) or empty(trim($data['title'])) or empty(trim($data['descripe']))) ? false : true;
+        $title = trim($data['title']);
+        $descipe = trim($data['descripe']);
+        return (empty($file_name) or empty($title) or empty($descipe)) ? false : true;
     }
 
     /**
