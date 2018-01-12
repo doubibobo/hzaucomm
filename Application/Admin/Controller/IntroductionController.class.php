@@ -62,9 +62,11 @@ class IntroductionController extends Controller {
      */
     public function infoUpdate() {
         $where = $_POST['id'];
-        if (empty(trim($_POST['title']))) {
+        $title = trim($_POST['title']);
+        $content = trim($_POST['content']);
+        if (empty($title)) {
             $data = "通告标题不能为空";
-        } elseif (empty(trim($_POST['content']))) {
+        } elseif (empty($content)) {
             $data = "通告标题不能为空";
         } else {
             $the_info_model = M("Infro");
