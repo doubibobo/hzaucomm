@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by PhpStorm.
  * User: zhuch
@@ -30,6 +30,7 @@ function isFormSubmit() {
 
 // 弹出提示信息
 function alertMessage($message) {
+    header('content-type:text/html;charset=utf-8');  
     echo "<script>alert(\"$message\"); window.location.href=document.referrer; </script>";
     exit();
 }
