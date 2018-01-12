@@ -77,7 +77,7 @@ class SourceController extends Controller {
      * 资源上传模块的视频上传
      */
     public function vid_update() {
-        $this->getAllType($this->the_type['vedio']);
+        $this->getAllType($this->the_type['video']);
         $this->show();
     }
 
