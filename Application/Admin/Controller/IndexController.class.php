@@ -124,7 +124,8 @@ class IndexController extends Controller {
      * @return string id值
      */
     private function getId() {
-        (empty(trim($_GET['id'])) || !is_numeric(trim($_GET['id']))) ? $this->error("程序内部错误") : $id = trim($_GET['id']);
+        $where = trim($_GET['id']);
+        (empty($where) || !is_numeric($where)) ? $this->error("程序内部错误") : $id = $where;
         return $id;
     }
 
