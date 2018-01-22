@@ -230,7 +230,7 @@ class SourceController extends Controller {
         $filename = empty($file_name);
         $descripe = trim($data['descripe']);
         $title = trim($data['title']);
-        return (empty($file_name) or empty($descripe) or empty($title) ? false : true;
+        return (empty($file_name) or empty($descripe) or empty($title)) ? false : true;
     }
 
     /**
